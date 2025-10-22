@@ -1,0 +1,44 @@
+/**
+ * @file ejemplos_uso.txt
+ * @brief Ejemplos de uso de las clases principales del sistema mesh agrícola.
+ *
+ * Estos ejemplos muestran cómo inicializar, configurar y utilizar los módulos clave en un nodo sensor.
+ */
+
+/**
+ * @example Inicialización típica en el setup principal
+ *
+ * @code{.cpp}
+ * NodeIdentity* identity = new NodeIdentity();
+ * identity->begin();
+ * uint8_t nodeId = identity->getNodeID();
+ * SensorManager* data = new SensorManager();
+ * data->begin();
+ * SPI.begin(VSPI_SCK, VSPI_MISO, VSPI_MOSI, VSPI_SS);
+ * RadioManager* radio = new RadioManager(nodeId);
+ * radio->init();
+ * AppLogic* logic = new AppLogic(*data, *identity, *radio);
+ * logic->begin();
+ * @endcode
+ */
+
+/**
+ * @example Envío de datos atmosféricos
+ *
+ * @code{.cpp}
+ * data->readSensorsAtmospheric(); // Prepara el buffer de muestras
+ * logic->sendAtmosphericData();   // Envía los datos al gateway
+ * @endcode
+ */
+
+/**
+ * @example Recepción y manejo de mensajes LoRa
+ *
+ * @code{.cpp}
+ * void loop() {
+ *     if (logic) {
+ *         logic->update(); // Gestiona recepción y eventos mesh
+ *     }
+ * }
+ * @endcode
+ */ 

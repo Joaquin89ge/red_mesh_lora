@@ -1,0 +1,47 @@
+# Rango y Formato de Variables en protocol.h
+
+Este documento explica los rangos, resoluciones y motivos de diseño de las variables usadas en las estructuras del protocolo de comunicación mesh LoRa para el sistema de sensores agrícolas.
+
+## ¿Por qué usar enteros en vez de float?
+- **Eficiencia:** Los enteros ocupan menos espacio y son más rápidos de transmitir por radio.
+- **Compatibilidad:** Facilitan la interoperabilidad entre microcontroladores y evitan problemas de representación binaria de los float.
+- **Precisión suficiente:** Los rangos y resoluciones elegidos permiten representar los valores relevantes para agricultura con suficiente precisión.
+
+## Rangos y Formatos
+
+### AtmosphericSample
+- `temp` (int16_t): Temperatura en décimas de grado Celsius. Rango: -400 a 800 (-40.0°C a 80.0°C)
+- `moisture` (uint16_t): Humedad en décimas de porcentaje. Rango: 0 a 1000 (0.0% a 100.0%)
+- `hour` (uint8_t): Hora de la muestra. Rango: 0-23
+- `minute` (uint8_t): Minuto de la muestra. Rango: 0-59
+
+### GroundSensor
+- `temp` (int16_t): Temperatura del suelo en décimas de grado. Rango: -400 a 800 (-40.0°C a 80.0°C)
+- `moisture` (uint16_t): Humedad del suelo en décimas de porcentaje. Rango: 0 a 1000 (0.0% a 100.0%)
+- `n`, `p`, `k` (uint16_t): Nitrógeno, Fósforo, Potasio. Rango: 0-1999 mg/kg
+- `EC` (uint16_t): Conductividad eléctrica. Rango: 0-20000 μS/cm
+- `PH` (uint8_t): pH en décimas. Rango: 30-90 (3.0 a 9.0)
+
+### GpsSensor
+- `latitude`, `longitude` (int32_t): Coordenadas en grados * 10^7. Rango: -1800000000 a 1800000000
+- `altitude` (int16_t): Altitud en metros. Rango: -1000 a 9000
+- `hour` (uint8_t): Hora UTC. Rango: 0-23
+- `minute` (uint8_t): Minuto UTC. Rango: 0-59
+- `flags` (uint8_t): Bitmask de validez de datos (ver código para detalles)
+
+### EnergyData
+- `volt` (float): Voltaje (resolución y rango según hardware)
+- `amp` (float): Corriente (resolución y rango según hardware)
+
+### GroundGpsPacket
+- Estructura compuesta de GroundSensor y GpsSensor.
+
+## Conversión de valores
+- Para transmitir un valor real como 23.4°C, se multiplica por 10 y se almacena como 234.
+- Para humedad 55.6%, se multiplica por 10 y se almacena como 556.
+- Para pH 7.2, se multiplica por 10 y se almacena como 72.
+- Para coordenadas GPS, se multiplica por 10^7.
+
+## Notas
+- Los valores fuera de rango pueden indicar error o dato no válido.
+- Los rangos están pensados para cubrir las condiciones típicas de agricultura y sensores comerciales. 

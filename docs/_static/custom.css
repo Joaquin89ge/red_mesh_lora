@@ -1,0 +1,60 @@
+/* Fondo general claro */
+body {
+  background-color: #f8f9fa;
+}
+
+/* Menú lateral azul/gris */
+.wy-nav-side {
+  background: #2980b9;
+}
+
+/* Títulos principales en negro */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222;
+  font-weight: 700;
+}
+
+/* Bloques destacados (note, tip, warning, important) */
+div.admonition.note {
+  background: #e8f4fd;
+  border-left: 4px solid #2980b9;
+}
+div.admonition.tip {
+  background: #eafbe7;
+  border-left: 4px solid #27ae60;
+}
+div.admonition.warning {
+  background: #fff4e5;
+  border-left: 4px solid #f39c12;
+}
+div.admonition.important {
+  background: #fdecea;
+  border-left: 4px solid #e74c3c;
+}
+
+a {
+  color: #2980b9;
+}
+
+a:hover {
+  color: #1a5276;
+}
+
+/* Código con fondo diferenciado */
+pre,
+code {
+  background: #f4f4f4;
+  color: #222;
+  border-radius: 4px;
+}
+
+/* Sticky sidebar */
+.wy-side-scroll {
+  position: sticky;
+  top: 0;
+}

@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  # Servicio 1: Construcción de la Documentación (Doc Builder)
+  # Este servicio se encarga de instalar las dependencias y ejecutar Sphinx.
+  doc_builder:
+    # Construye la imagen usando el Dockerfile en el directorio actual
+    build: .
+    # Mapea todo el directorio actual (donde está el proyecto) al /app dentro del contenedor
+    # Esto permite que Sphinx lea los archivos fuente y escriba los archivos HTML
+    volumes:
+      - .:/app
+    # El comando que se ejecuta para compilar toda la documentación
+    command: ./build_docs.sh
+    # Usa un perfil para que el build no se ejecute automáticamente al levantar el servidor
+    profiles: ["build"]
+
+  # Servicio 2: Servidor de Documentación (Doc Server)
+  # Este servicio sirve los archivos HTML generados por 'doc_builder'
+  doc_server:
+    image: python:3.11-slim
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - "8000:8000" # Mapea el puerto 8000 del contenedor al puerto 8000 del host
+    # Inicia el servidor HTTP simple de Python para servir los docs generados
+    command: python3 -m http.server 8000
+    profiles: ["serve"]
+

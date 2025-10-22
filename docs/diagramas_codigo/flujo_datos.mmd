@@ -1,0 +1,11 @@
+%% Diagrama de flujo de datos del sistema Red Mesh Agrícola
+sequenceDiagram
+    participant Sensor as Nodo Sensor
+    participant Gateway as Gateway Central
+    participant Cloud as Nube
+
+    Sensor->>Gateway: Envía datos de sensores
+    Gateway->>Gateway: Procesa y almacena datos
+    Gateway->>Cloud: Sube datos procesados
+    Cloud->>Gateway: Envía comandos/configuración
+    Gateway->>Sensor: Reenvía comandos/configuración 

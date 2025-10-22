@@ -1,0 +1,7 @@
+flowchart TD
+    A["main.cpp / main_nodo.ino\n(Capa de Entrada Principal)"] --> B["AppLogic\n(Capa de Lógica de Aplicación)"]
+    B --> C["SensorManager / NodeIdentity\n(Adquisición de Sensores / Identidad)"]
+    B --> D["RadioManager\n(Capa de Radio)"]
+    D --> E["LoRa Mesh Network"]
+    B --> F["Protocol\n(Capa de Protocolo)"]
+    C --> G["Sensores Físicos\n(DHT, GPS, NPK, etc.)"] 

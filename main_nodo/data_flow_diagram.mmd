@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant Main as "main.cpp / main_nodo.ino"
+    participant App as "AppLogic"
+    participant Sensor as "SensorManager"
+    participant Radio as "RadioManager"
+    participant Proto as "Protocol"
+    participant LoRa as "LoRa Mesh Network"
+    Main->>App: Inicializa y llama a update()
+    App->>Sensor: Solicita datos de sensores
+    Sensor->>Sensor: Lee sensores físicos
+    App->>Radio: Envía datos usando RadioManager
+    Radio->>Proto: Empaqueta datos según protocolo
+    Radio->>LoRa: Envía mensaje LoRa
+    LoRa-->>Radio: Recibe mensaje
+    Radio-->>App: Entrega mensaje recibido
+    App-->>Main: Actualización completada 

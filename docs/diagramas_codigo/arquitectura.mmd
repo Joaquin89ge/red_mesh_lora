@@ -1,0 +1,17 @@
+%% Diagrama de arquitectura de la Red Mesh Agrícola
+flowchart TD
+    GW["Gateway Central"]
+    N1["Nodo Sensor 1"]
+    N2["Nodo Sensor 2"]
+    N3["Nodo Sensor 3"]
+    N4["Nodo Sensor 4"]
+    Cloud["Nube / Plataforma de Visualización"]
+
+    GW -- LoRa Mesh --> N1
+    GW -- LoRa Mesh --> N2
+    GW -- LoRa Mesh --> N3
+    GW -- LoRa Mesh --> N4
+    N1 -- LoRa Mesh --> N2
+    N2 -- LoRa Mesh --> N3
+    N3 -- LoRa Mesh --> N4
+    GW -- WiFi/4G --> Cloud 
