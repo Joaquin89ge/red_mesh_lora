@@ -13,4 +13,4 @@ sphinx-sitemap==2.2.0
 # (ya incluidas en las anteriores)
 
 # Dependencias específicas para main_nodo
-sphinx.ext.napoleon  # Ya incluido en sphinx base
+# sphinx.ext.napoleon  # Ya incluido en sphinx base

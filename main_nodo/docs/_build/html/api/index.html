@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API del Sistema de Monitoreo Agrícola &mdash; documentación de Sistema de Monitoreo Agrícola - 1.0.0</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=14be7d3c"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Sistema de Monitoreo Agrícola
+          </a>
+              <div class="version">
+                1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Índice de Documentación</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Visión General del Sistema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html#id1">Errores Comunes y Decisiones de Diseño</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocol.html">Protocolo de Comunicación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocol.html#id1">Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ejemplos_uso.html">Ejemplos de Uso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metricas.html">Métricas de Rendimiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recursos.html">Recursos y Enlaces Externos</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sistema de Monitoreo Agrícola</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">API del Sistema de Monitoreo Agrícola</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/index.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-del-sistema-de-monitoreo-agricola">
+<h1>API del Sistema de Monitoreo Agrícola<a class="headerlink" href="#api-del-sistema-de-monitoreo-agricola" title="Enlace permanente a este encabezado"></a></h1>
+<p>Esta sección contiene la documentación completa de la API del sistema, generada automáticamente
+usando Sphinx con autodoc para garantizar precisión y actualización automática.</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Clases Principales:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sensor_manager.html">SensorManager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sensor_manager.html#descripcion">Descripción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor_manager.html#caracteristicas-principales">Características Principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor_manager.html#componentes-integrados">Componentes Integrados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor_manager.html#ejemplo-de-uso">Ejemplo de Uso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor_manager.html#metodos-principales">Métodos Principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor_manager.html#estructuras-de-datos">Estructuras de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor_manager.html#configuracion">Configuración</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor_manager.html#optimizaciones">Optimizaciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor_manager.html#notas-de-implementacion">Notas de Implementación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor_manager.html#ver-tambien">Ver también</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="voltage_reader.html">VoltageReader</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="voltage_reader.html#descripcion">Descripción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voltage_reader.html#caracteristicas-principales">Características Principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voltage_reader.html#especificaciones-tecnicas">Especificaciones Técnicas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voltage_reader.html#ejemplo-de-uso">Ejemplo de Uso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voltage_reader.html#metodos-principales">Métodos Principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voltage_reader.html#configuracion">Configuración</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voltage_reader.html#algoritmo-de-filtrado">Algoritmo de Filtrado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voltage_reader.html#sistema-de-calibracion">Sistema de Calibración</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voltage_reader.html#validacion-de-datos">Validación de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voltage_reader.html#optimizaciones">Optimizaciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voltage_reader.html#casos-de-uso">Casos de Uso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voltage_reader.html#notas-de-implementacion">Notas de Implementación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voltage_reader.html#ver-tambien">Ver también</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="radio_manager.html">RadioManager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="radio_manager.html#descripcion">Descripción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radio_manager.html#caracteristicas-principales">Características Principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radio_manager.html#especificaciones-tecnicas">Especificaciones Técnicas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radio_manager.html#ejemplo-de-uso">Ejemplo de Uso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radio_manager.html#metodos-principales">Métodos Principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radio_manager.html#configuracion-de-red">Configuración de Red</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radio_manager.html#protocolo-de-comunicacion">Protocolo de Comunicación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radio_manager.html#enrutamiento-mesh">Enrutamiento Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radio_manager.html#gestion-de-congestion">Gestión de Congestión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radio_manager.html#optimizaciones">Optimizaciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radio_manager.html#casos-de-uso">Casos de Uso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radio_manager.html#notas-de-implementacion">Notas de Implementación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radio_manager.html#ver-tambien">Ver también</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="app_logic.html">AppLogic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="app_logic.html#descripcion">Descripción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_logic.html#caracteristicas-principales">Características Principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_logic.html#arquitectura-del-sistema">Arquitectura del Sistema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_logic.html#ejemplo-de-uso">Ejemplo de Uso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_logic.html#metodos-principales">Métodos Principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_logic.html#estrategias-de-transmision">Estrategias de Transmisión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_logic.html#gestion-de-energia">Gestión de Energía</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_logic.html#logica-de-decision">Lógica de Decisión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_logic.html#gestion-de-errores">Gestión de Errores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_logic.html#optimizaciones">Optimizaciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_logic.html#casos-de-uso">Casos de Uso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_logic.html#notas-de-implementacion">Notas de Implementación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app_logic.html#ver-tambien">Ver también</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="node_identity.html">NodeIdentity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="node_identity.html#descripcion">Descripción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node_identity.html#caracteristicas-principales">Características Principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node_identity.html#especificaciones-tecnicas">Especificaciones Técnicas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node_identity.html#ejemplo-de-uso">Ejemplo de Uso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node_identity.html#metodos-principales">Métodos Principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node_identity.html#estructura-de-configuracion">Estructura de Configuración</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node_identity.html#persistencia-de-datos">Persistencia de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node_identity.html#gestion-de-versiones">Gestión de Versiones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node_identity.html#configuracion-por-defecto">Configuración por Defecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node_identity.html#casos-de-uso">Casos de Uso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node_identity.html#notas-de-implementacion">Notas de Implementación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="node_identity.html#ver-tambien">Ver también</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="protocol.html">Protocolo de Comunicación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocol.html#id1">Protocol</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="protocol.html#descripcion">Descripción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol.html#caracteristicas-principales">Características Principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol.html#estructuras-de-datos">Estructuras de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol.html#constantes-del-sistema">Constantes del Sistema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol.html#ejemplo-de-uso">Ejemplo de Uso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol.html#validacion-de-datos">Validación de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol.html#serializacion-de-datos">Serialización de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol.html#optimizaciones-de-memoria">Optimizaciones de Memoria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol.html#compatibilidad-de-versiones">Compatibilidad de Versiones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol.html#casos-de-uso">Casos de Uso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol.html#notas-de-implementacion">Notas de Implementación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocol.html#ver-tambien">Ver también</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="clases-del-sistema">
+<h1>Clases del Sistema<a class="headerlink" href="#clases-del-sistema" title="Enlace permanente a este encabezado"></a></h1>
+<section id="sensormanager">
+<h2>SensorManager<a class="headerlink" href="#sensormanager" title="Enlace permanente a este encabezado"></a></h2>
+</section>
+<section id="voltagereader">
+<h2>VoltageReader<a class="headerlink" href="#voltagereader" title="Enlace permanente a este encabezado"></a></h2>
+</section>
+<section id="radiomanager">
+<h2>RadioManager<a class="headerlink" href="#radiomanager" title="Enlace permanente a este encabezado"></a></h2>
+</section>
+<section id="applogic">
+<h2>AppLogic<a class="headerlink" href="#applogic" title="Enlace permanente a este encabezado"></a></h2>
+</section>
+<section id="nodeidentity">
+<h2>NodeIdentity<a class="headerlink" href="#nodeidentity" title="Enlace permanente a este encabezado"></a></h2>
+</section>
+<section id="protocol">
+<h2>Protocol<a class="headerlink" href="#protocol" title="Enlace permanente a este encabezado"></a></h2>
+</section>
+</section>
+<section id="estructuras-de-datos">
+<h1>Estructuras de Datos<a class="headerlink" href="#estructuras-de-datos" title="Enlace permanente a este encabezado"></a></h1>
+<section id="protocol-atmosphericsample">
+<h2>Protocol::AtmosphericSample<a class="headerlink" href="#protocol-atmosphericsample" title="Enlace permanente a este encabezado"></a></h2>
+</section>
+<section id="protocol-groundsensor">
+<h2>Protocol::GroundSensor<a class="headerlink" href="#protocol-groundsensor" title="Enlace permanente a este encabezado"></a></h2>
+</section>
+<section id="protocol-gpssensor">
+<h2>Protocol::GpsSensor<a class="headerlink" href="#protocol-gpssensor" title="Enlace permanente a este encabezado"></a></h2>
+</section>
+<section id="protocol-energydata">
+<h2>Protocol::EnergyData<a class="headerlink" href="#protocol-energydata" title="Enlace permanente a este encabezado"></a></h2>
+</section>
+</section>
+<section id="configuracion">
+<h1>Configuración<a class="headerlink" href="#configuracion" title="Enlace permanente a este encabezado"></a></h1>
+<section id="config">
+<h2>Config<a class="headerlink" href="#config" title="Enlace permanente a este encabezado"></a></h2>
+</section>
+</section>
+<section id="ejemplos-de-uso">
+<h1>Ejemplos de Uso<a class="headerlink" href="#ejemplos-de-uso" title="Enlace permanente a este encabezado"></a></h1>
+<section id="sensormanager-example">
+<h2>SensorManager Example<a class="headerlink" href="#sensormanager-example" title="Enlace permanente a este encabezado"></a></h2>
+</section>
+<section id="voltagereader-example">
+<h2>VoltageReader Example<a class="headerlink" href="#voltagereader-example" title="Enlace permanente a este encabezado"></a></h2>
+</section>
+</section>
+<section id="notas-de-la-api">
+<h1>Notas de la API<a class="headerlink" href="#notas-de-la-api" title="Enlace permanente a este encabezado"></a></h1>
+<ul class="simple">
+<li><p>Todas las clases siguen principios SOLID para máxima modularidad</p></li>
+<li><p>La documentación se genera automáticamente desde el código fuente</p></li>
+<li><p>Los ejemplos están probados y funcionan con la versión actual</p></li>
+<li><p>Para contribuir, ver <span class="xref std std-doc">../developer_guide/contributing</span></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Equipo de Desarrollo.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

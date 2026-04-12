@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎯 Diagrama de Estados del Sistema &mdash; documentación de Sistema Gateway Agrícola - 1.0.0</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=14be7d3c"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Sistema Gateway Agrícola
+          </a>
+              <div class="version">
+                1.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Descripción General:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Sistema de Gateway Agrícola con Red Mesh LoRa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../README.html#descripcion-general">🎯 Descripción General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../README.html#arquitectura-del-sistema">🏗️ Arquitectura del Sistema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#componentes-principales">Componentes Principales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#caracteristicas-tecnicas-avanzadas">Características Técnicas Avanzadas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#hardware-especializado">🔧 Hardware Especializado</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#firmware-modular">💻 Firmware Modular</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../README.html#funcionalidades-tecnicas-destacadas">🚀 Funcionalidades Técnicas Destacadas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#gestion-de-identidad-avanzada">1. Gestión de Identidad Avanzada</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#comunicacion-mesh-robusta">2. Comunicación Mesh Robusta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#gestion-de-tiempo-real">3. Gestión de Tiempo Real</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#logica-de-aplicacion-inteligente">4. Lógica de Aplicación Inteligente</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../README.html#especificaciones-tecnicas">📊 Especificaciones Técnicas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#hardware-del-gateway">Hardware del Gateway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#comunicacion-lora">Comunicación LoRa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#capacidades-de-red">Capacidades de Red</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#consumo-energetico">Consumo Energético</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../README.html#innovaciones-tecnicas">🔬 Innovaciones Técnicas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#arquitectura-modular-solid">1. Arquitectura Modular SOLID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#sistema-de-identidad-unica">2. Sistema de Identidad Única</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#gestion-de-errores-robusta">3. Gestión de Errores Robusta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#optimizacion-de-energia">4. Optimización de Energía</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../README.html#beneficios-tecnicos">📈 Beneficios Técnicos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#para-agricultores">Para Agricultores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#para-desarrolladores">Para Desarrolladores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#para-el-sistema">Para el Sistema</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../README.html#casos-de-uso">🎯 Casos de Uso</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#monitoreo-de-red-agricola">1. Monitoreo de Red Agrícola</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#gestion-de-invernaderos">2. Gestión de Invernaderos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#agricultura-de-precision">3. Agricultura de Precisión</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../README.html#roadmap-tecnico">🔮 Roadmap Técnico</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#fase-1-completada">Fase 1 (Completada)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#fase-2-en-desarrollo">Fase 2 (En Desarrollo)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#fase-3-planificada">Fase 3 (Planificada)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../README.html#metricas-de-rendimiento">📊 Métricas de Rendimiento</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#tecnicas">Técnicas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#operacionales">Operacionales</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Sistema Gateway Agrícola</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../README.html">Sistema de Gateway Agrícola con Red Mesh LoRa</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#descripcion-general">🎯 Descripción General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#arquitectura-del-sistema">🏗️ Arquitectura del Sistema</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#componentes-principales">Componentes Principales</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#caracteristicas-tecnicas-avanzadas">Características Técnicas Avanzadas</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#funcionalidades-tecnicas-destacadas">🚀 Funcionalidades Técnicas Destacadas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#gestion-de-identidad-avanzada">1. Gestión de Identidad Avanzada</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#comunicacion-mesh-robusta">2. Comunicación Mesh Robusta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#gestion-de-tiempo-real">3. Gestión de Tiempo Real</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#logica-de-aplicacion-inteligente">4. Lógica de Aplicación Inteligente</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#especificaciones-tecnicas">📊 Especificaciones Técnicas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#hardware-del-gateway">Hardware del Gateway</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#comunicacion-lora">Comunicación LoRa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#capacidades-de-red">Capacidades de Red</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#consumo-energetico">Consumo Energético</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#innovaciones-tecnicas">🔬 Innovaciones Técnicas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#arquitectura-modular-solid">1. Arquitectura Modular SOLID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#sistema-de-identidad-unica">2. Sistema de Identidad Única</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#gestion-de-errores-robusta">3. Gestión de Errores Robusta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#optimizacion-de-energia">4. Optimización de Energía</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#beneficios-tecnicos">📈 Beneficios Técnicos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#para-agricultores">Para Agricultores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#para-desarrolladores">Para Desarrolladores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#para-el-sistema">Para el Sistema</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#casos-de-uso">🎯 Casos de Uso</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#monitoreo-de-red-agricola">1. Monitoreo de Red Agrícola</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#gestion-de-invernaderos">2. Gestión de Invernaderos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#agricultura-de-precision">3. Agricultura de Precisión</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#roadmap-tecnico">🔮 Roadmap Técnico</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#fase-1-completada">Fase 1 (Completada)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#fase-2-en-desarrollo">Fase 2 (En Desarrollo)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#fase-3-planificada">Fase 3 (Planificada)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../README.html#metricas-de-rendimiento">📊 Métricas de Rendimiento</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#tecnicas">Técnicas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../README.html#operacionales">Operacionales</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../main_gateway.html">main_gateway.ino - Punto de Entrada del Sistema Gateway</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#descripcion-general">📋 Descripción General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#arquitectura-del-sistema">🏗️ Arquitectura del Sistema</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#componentes-principales">Componentes Principales</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#inicializacion-dinamica">Inicialización Dinámica</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#estructura-del-archivo">📁 Estructura del Archivo</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#includes-y-dependencias">Includes y Dependencias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#variables-globales">Variables Globales</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#funcion-setup">🔧 Función setup()</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#descripcion">Descripción</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#secuencia-de-inicializacion">Secuencia de Inicialización</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#funcion-loop">🔄 Función loop()</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#id1">Descripción</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#implementacion">Implementación</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#caracteristicas-tecnicas">🔍 Características Técnicas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#id2">1. Inicialización Dinámica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#manejo-de-errores">2. Manejo de Errores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#optimizacion-de-energia">3. Optimización de Energía</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#debugging-avanzado">4. Debugging Avanzado</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#flujo-de-ejecucion">📊 Flujo de Ejecución</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#fase-1-inicializacion">Fase 1: Inicialización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#fase-2-operacion">Fase 2: Operación</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#configuracion-y-personalizacion">🔧 Configuración y Personalización</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#parametros-de-configuracion">Parámetros de Configuración</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#personalizacion">Personalización</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#consideraciones-importantes">🚨 Consideraciones Importantes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#orden-de-inicializacion">1. Orden de Inicialización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#gestion-de-memoria">2. Gestión de Memoria</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#robustez-del-sistema">3. Robustez del Sistema</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#metricas-de-rendimiento">📈 Métricas de Rendimiento</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#tiempos-de-inicializacion">Tiempos de Inicialización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#uso-de-recursos">Uso de Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#mejoras-futuras">🔮 Mejoras Futuras</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#fase-1-optimizaciones">Fase 1: Optimizaciones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#fase-2-nuevas-funcionalidades">Fase 2: Nuevas Funcionalidades</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#fase-3-integracion">Fase 3: Integración</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html">config.h - Configuración Central del Sistema Gateway</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#descripcion-general">📋 Descripción General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#estructura-de-configuracion">🏗️ Estructura de Configuración</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#modos-de-operacion">Modos de Operación</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#parametros-de-red">📊 Parámetros de Red</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#configuracion-de-nodos">Configuración de Nodos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#timeouts-y-delays">Timeouts y Delays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#delays-de-procesamiento">Delays de Procesamiento</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#configuracion-de-hardware">🔧 Configuración de Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#comunicacion-lora">Comunicación LoRa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#rtc-ds1302-3-wire-interface">RTC DS1302 (3-wire interface)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#configuracion-de-comunicacion">Configuración de Comunicación</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#macros-de-debugging">🔍 Macros de Debugging</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#sistema-de-logging">Sistema de Logging</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#configuraciones-avanzadas">📈 Configuraciones Avanzadas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#parametros-de-comunicacion">Parámetros de Comunicación</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#personalizacion-y-optimizacion">🔧 Personalización y Optimización</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#modificacion-de-parametros">Modificación de Parámetros</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#consideraciones-importantes">🚨 Consideraciones Importantes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#compatibilidad-de-hardware">1. Compatibilidad de Hardware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#optimizacion-de-energia">2. Optimización de Energía</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#escalabilidad">3. Escalabilidad</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#metricas-de-configuracion">📊 Métricas de Configuración</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#uso-de-recursos">Uso de Recursos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#optimizaciones">Optimizaciones</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#mejoras-futuras">🔮 Mejoras Futuras</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#fase-1-configuracion-dinamica">Fase 1: Configuración Dinámica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#fase-2-optimizaciones-avanzadas">Fase 2: Optimizaciones Avanzadas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#fase-3-integracion">Fase 3: Integración</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#checklist-de-configuracion">📋 Checklist de Configuración</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#antes-del-despliegue">Antes del Despliegue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#durante-la-operacion">Durante la Operación</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../node_identity.html">NodeIdentity - Gestión de Identidad Única del Gateway</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#descripcion-general">📋 Descripción General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#arquitectura-de-la-clase">🏗️ Arquitectura de la Clase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#proposito-principal">Propósito Principal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#caracteristicas-tecnicas">Características Técnicas</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#estructura-de-la-clase">📁 Estructura de la Clase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#constantes-y-definiciones">Constantes y Definiciones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#variables-de-instancia">Variables de Instancia</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#metodos-publicos">🔧 Métodos Públicos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#constructor">Constructor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#getnodeid">getNodeID()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#getdevicemac">getDeviceMAC()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#savegetway">saveGetway()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#getgetway">getGetway()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#changenodeid">changeNodeID()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#begin">begin()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#metodos-privados">🔧 Métodos Privados</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#generatesafehash">generateSafeHash()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#crc8">crc8()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#loadbytefromfile">loadByteFromFile()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#savebytetofile">saveByteToFile()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#algoritmo-de-generacion-de-id">📊 Algoritmo de Generación de ID</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#paso-1-obtencion-de-mac">Paso 1: Obtención de MAC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#paso-2-generacion-de-hash">Paso 2: Generación de Hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#paso-3-validacion-contra-lista-negra">Paso 3: Validación contra Lista Negra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#paso-4-persistencia">Paso 4: Persistencia</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#caracteristicas-de-seguridad">🔍 Características de Seguridad</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#proteccion-contra-colisiones">1. Protección contra Colisiones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#persistencia-robusta">2. Persistencia Robusta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#optimizacion-de-energia">3. Optimización de Energía</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#metricas-de-rendimiento">📈 Métricas de Rendimiento</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#tiempos-de-operacion">Tiempos de Operación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#uso-de-recursos">Uso de Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#consideraciones-importantes">🚨 Consideraciones Importantes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#dependencias-de-hardware">1. Dependencias de Hardware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#gestion-de-errores">2. Gestión de Errores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#escalabilidad">3. Escalabilidad</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#mejoras-futuras">🔮 Mejoras Futuras</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#fase-1-optimizaciones">Fase 1: Optimizaciones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#fase-2-nuevas-funcionalidades">Fase 2: Nuevas Funcionalidades</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#fase-3-integracion">Fase 3: Integración</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#ejemplos-de-uso">📋 Ejemplos de Uso</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#ejemplo-1-inicializacion-basica">Ejemplo 1: Inicialización Básica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#ejemplo-2-gestion-de-gateway">Ejemplo 2: Gestión de Gateway</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../node_identity.html#ejemplo-3-cambio-de-id">Ejemplo 3: Cambio de ID</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../radio_manager.html">RadioManager - Gestión de Comunicación LoRa Mesh</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#descripcion-general">📋 Descripción General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#arquitectura-de-la-clase">🏗️ Arquitectura de la Clase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#proposito-principal">Propósito Principal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#caracteristicas-tecnicas">Características Técnicas</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#estructura-de-la-clase">📁 Estructura de la Clase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#variables-de-instancia">Variables de Instancia</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#dependencias">Dependencias</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#metodos-publicos">🔧 Métodos Públicos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#constructor">Constructor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#init">init()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#sendmessage">sendMessage()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#recvmessage">recvMessage()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#recvmessagetimeout">recvMessageTimeout()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#update">update()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#configuracion-de-hardware">📊 Configuración de Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#pines-de-conexion">Pines de Conexión</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#configuracion-spi">Configuración SPI</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#caracteristicas-de-comunicacion">🔍 Características de Comunicación</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#protocolo-lora">1. Protocolo LoRa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#enrutamiento-mesh">2. Enrutamiento Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#gestion-de-red">3. Gestión de Red</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#metricas-de-rendimiento">📈 Métricas de Rendimiento</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#tiempos-de-operacion">Tiempos de Operación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#capacidades-de-red">Capacidades de Red</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#uso-de-recursos">Uso de Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#consideraciones-importantes">🚨 Consideraciones Importantes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#id1">1. Configuración de Hardware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#gestion-de-errores">2. Gestión de Errores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#optimizacion-de-red">3. Optimización de Red</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#mejoras-futuras">🔮 Mejoras Futuras</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#fase-1-optimizaciones">Fase 1: Optimizaciones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#fase-2-nuevas-funcionalidades">Fase 2: Nuevas Funcionalidades</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#fase-3-integracion">Fase 3: Integración</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#ejemplos-de-uso">📋 Ejemplos de Uso</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#ejemplo-1-inicializacion-basica">Ejemplo 1: Inicialización Básica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#ejemplo-2-envio-de-mensaje">Ejemplo 2: Envío de Mensaje</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#ejemplo-3-recepcion-con-timeout">Ejemplo 3: Recepción con Timeout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../radio_manager.html#ejemplo-4-bucle-de-comunicacion">Ejemplo 4: Bucle de Comunicación</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rtc_manager.html">RtcManager - Gestor del Módulo RTC DS1307</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#descripcion-general">Descripción General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#caracteristicas-tecnicas">Características Técnicas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rtc_manager.html#hardware">Hardware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rtc_manager.html#comunicacion">Comunicación</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#estructura-de-la-clase">Estructura de la Clase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#metodos-principales">Métodos Principales</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rtc_manager.html#constructor">Constructor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rtc_manager.html#inicializacion">Inicialización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rtc_manager.html#obtencion-de-fecha-hora">Obtención de Fecha/Hora</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rtc_manager.html#configuracion-de-fecha-hora">Configuración de Fecha/Hora</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rtc_manager.html#validacion-de-fecha-hora">Validación de Fecha/Hora</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rtc_manager.html#obtencion-de-hora-como-string">Obtención de Hora como String</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rtc_manager.html#comparacion-de-horas">Comparación de Horas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rtc_manager.html#impresion-de-fecha-hora">Impresión de Fecha/Hora</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rtc_manager.html#verificacion-de-estado">Verificación de Estado</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#ejemplo-de-uso">Ejemplo de Uso</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#configuracion-de-hardware">Configuración de Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rtc_manager.html#conexiones-i2c">Conexiones I2C</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rtc_manager.html#notas-importantes">Notas Importantes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#manejo-de-errores">Manejo de Errores</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rtc_manager.html#errores-comunes">Errores Comunes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rtc_manager.html#diagnostico">Diagnóstico</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#optimizaciones-implementadas">Optimizaciones Implementadas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rtc_manager.html#debug-reducido">Debug Reducido</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rtc_manager.html#validaciones">Validaciones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rtc_manager.html#compatibilidad">Compatibilidad</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#diferencias-con-ds1302">Diferencias con DS1302</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#notas-de-implementacion">Notas de Implementación</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../app_logic.html">AppLogic - Lógica de Aplicación del Gateway</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#descripcion-general">📋 Descripción General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#arquitectura-de-la-clase">🏗️ Arquitectura de la Clase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#proposito-principal">Propósito Principal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#caracteristicas-tecnicas">Características Técnicas</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#estructura-de-la-clase">📁 Estructura de la Clase</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#variables-de-instancia">Variables de Instancia</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#almacenamiento-de-datos">Almacenamiento de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#metodos-publicos">🔧 Métodos Públicos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#constructor">Constructor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#begin">begin()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#update">update()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#metodos-privados">🔧 Métodos Privados</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#sendannounce">sendAnnounce()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#handlehello">handleHello()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#registernewnode">registerNewNode()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#requestatmosphericdata">requestAtmosphericData()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#requestgroundgpsdata">requestGroundGpsData()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#handleuartrequest">handleUartRequest()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#sendchangeid">sendChangeID()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#timer">timer()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#comparehsandms">compareHsAndMs()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#gestion-de-datos">📊 Gestión de Datos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#estructuras-de-almacenamiento">Estructuras de Almacenamiento</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#gestion-de-nodos">Gestión de Nodos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#protocolo-de-comunicacion">🔍 Protocolo de Comunicación</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#tipos-de-mensajes">Tipos de Mensajes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#flujo-de-comunicacion">Flujo de Comunicación</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#metricas-de-rendimiento">📈 Métricas de Rendimiento</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#tiempos-de-operacion">Tiempos de Operación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#capacidades-de-red">Capacidades de Red</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#uso-de-recursos">Uso de Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#consideraciones-importantes">🚨 Consideraciones Importantes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#gestion-de-memoria">1. Gestión de Memoria</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#robustez-de-red">2. Robustez de Red</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#escalabilidad">3. Escalabilidad</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#mejoras-futuras">🔮 Mejoras Futuras</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#fase-1-optimizaciones">Fase 1: Optimizaciones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#fase-2-nuevas-funcionalidades">Fase 2: Nuevas Funcionalidades</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#fase-3-integracion">Fase 3: Integración</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#ejemplos-de-uso">📋 Ejemplos de Uso</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#ejemplo-1-inicializacion-basica">Ejemplo 1: Inicialización Básica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#ejemplo-2-monitoreo-de-nodos">Ejemplo 2: Monitoreo de Nodos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#ejemplo-3-acceso-a-datos">Ejemplo 3: Acceso a Datos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#ejemplo-4-programacion-temporal">Ejemplo 4: Programación Temporal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#ejemplo-5-gestion-de-errores">Ejemplo 5: Gestión de Errores</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html">Instalación del Sistema Gateway</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#requisitos-del-sistema">Requisitos del Sistema</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#hardware-requerido">Hardware Requerido</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#software-requerido">Software Requerido</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#instalacion-del-entorno-de-desarrollo">Instalación del Entorno de Desarrollo</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#instalar-platformio">1. Instalar PlatformIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#clonar-el-repositorio">2. Clonar el Repositorio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#instalar-dependencias">3. Instalar Dependencias</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#configuracion-del-hardware">Configuración del Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#diagrama-de-conexiones">Diagrama de Conexiones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#pasos-de-conexion">Pasos de Conexión</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#configuracion-del-software">Configuración del Software</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#configurar-platformio">1. Configurar PlatformIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#configurar-parametros">2. Configurar Parámetros</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#compilacion-y-subida">Compilación y Subida</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#compilar-el-proyecto">1. Compilar el Proyecto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#subir-firmware">2. Subir Firmware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#verificar-instalacion">3. Verificar Instalación</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#configuracion-de-red">Configuración de Red</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#configurar-frecuencia-lora">1. Configurar Frecuencia LoRa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#configurar-potencia-de-transmision">2. Configurar Potencia de Transmisión</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#configurar-parametros-de-red">3. Configurar Parámetros de Red</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#verificacion-del-sistema">Verificación del Sistema</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#pruebas-basicas">1. Pruebas Básicas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#pruebas-de-red">2. Pruebas de Red</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#pruebas-de-datos">3. Pruebas de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#solucion-de-problemas">Solución de Problemas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#problemas-comunes">Problemas Comunes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#comandos-de-diagnostico">Comandos de Diagnóstico</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#proximos-pasos">Próximos Pasos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html">Configuración del Sistema Gateway</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#configuracion-de-hardware">Configuración de Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#pines-de-conexion">Pines de Conexión</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#configuracion-de-red">Configuración de Red</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#parametros-lora">Parámetros LoRa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#parametros-de-red-mesh">Parámetros de Red Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#timeouts-y-delays">Timeouts y Delays</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#configuracion-de-datos">Configuración de Datos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#muestras-por-nodo">Muestras por Nodo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#delays-de-procesamiento">Delays de Procesamiento</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#configuracion-de-debugging">Configuración de Debugging</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#modo-debug">Modo Debug</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#configuracion-de-nodeidentity">Configuración de NodeIdentity</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#archivos-de-persistencia">Archivos de Persistencia</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#valores-por-defecto">Valores por Defecto</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#configuracion-de-radiomanager">Configuración de RadioManager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#parametros-de-inicializacion">Parámetros de Inicialización</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#configuracion-de-rtcmanager">Configuración de RtcManager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#id1">Parámetros de Inicialización</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#configuracion-de-applogic">Configuración de AppLogic</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#horarios-de-muestreo">Horarios de Muestreo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#parametros-de-reintentos">Parámetros de Reintentos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#configuracion-avanzada">Configuración Avanzada</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#optimizacion-de-memoria">Optimización de Memoria</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#optimizacion-de-energia">Optimización de Energía</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#configuracion-de-seguridad">Configuración de Seguridad</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#configuracion-por-entorno">Configuración por Entorno</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#desarrollo">Desarrollo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#produccion">Producción</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#testing">Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#configuracion-de-monitoreo">Configuración de Monitoreo</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#logging">Logging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#metricas">Métricas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#alertas">Alertas</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#configuracion-de-red-mesh">Configuración de Red Mesh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#topologia">Topología</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#enrutamiento">Enrutamiento</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#configuracion-de-protocolo">Configuración de Protocolo</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#tipos-de-mensaje">Tipos de Mensaje</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#estructura-de-mensaje">Estructura de Mensaje</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#validacion">Validación</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#configuracion-de-persistencia">Configuración de Persistencia</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#littlefs">LittleFS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#backup">Backup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#configuracion-de-actualizaciones">Configuración de Actualizaciones</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#ota-over-the-air">OTA (Over-The-Air)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#verificacion">Verificación</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#configuracion-de-integracion">Configuración de Integración</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#apis-externas">APIs Externas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#webhooks">Webhooks</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#configuracion-de-diagnostico">Configuración de Diagnóstico</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#diagnostico-de-hardware">Diagnóstico de Hardware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#metricas-de-rendimiento">Métricas de Rendimiento</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html">Solución de Problemas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#problemas-de-compilacion">Problemas de Compilación</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#error-radiohead-library-not-found">Error: «RadioHead library not found»</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#error-rtcds1302-library-not-found">Error: «RtcDS1302 library not found»</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#error-littlefs-library-not-found">Error: «LittleFS library not found»</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#error-de-memoria-insuficiente">Error de Memoria Insuficiente</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#problemas-de-subida">Problemas de Subida</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#error-failed-to-connect-to-esp8266">Error: «Failed to connect to ESP8266»</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#error-upload-failed">Error: «Upload failed»</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#problemas-de-hardware">Problemas de Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#error-de-comunicacion-lora">Error de Comunicación LoRa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#error-de-rtc">Error de RTC</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#problemas-de-red">Problemas de Red</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#nodos-no-detectados">Nodos No Detectados</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#perdida-de-paquetes">Pérdida de Paquetes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#problemas-de-memoria">Problemas de Memoria</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#desbordamiento-de-memoria">Desbordamiento de Memoria</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#problemas-de-energia">Problemas de Energía</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#consumo-excesivo">Consumo Excesivo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#problemas-de-datos">Problemas de Datos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#datos-corruptos">Datos Corruptos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#problemas-de-configuracion">Problemas de Configuración</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#configuracion-no-persistente">Configuración No Persistente</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#comandos-de-diagnostico">Comandos de Diagnóstico</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#verificar-estado-del-sistema">Verificar Estado del Sistema</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#verificar-memoria">Verificar Memoria</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#verificar-red">Verificar Red</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#verificar-rtc">Verificar RTC</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#logs-de-diagnostico">Logs de Diagnóstico</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#habilitar-logs-detallados">Habilitar Logs Detallados</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../troubleshooting.html#interpretar-logs">Interpretar Logs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#contacto-y-soporte">Contacto y Soporte</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference.html">Referencia de API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#nodeidentity-api">NodeIdentity API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#constructor">Constructor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#getnodeid">getNodeID()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#getdevicemac">getDeviceMAC()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#savegetway">saveGetway()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#getgetway">getGetway()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#radiomanager-api">RadioManager API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#id1">Constructor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#init">init()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#sendmessage">sendMessage()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#recvmessage">recvMessage()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#recvmessagetimeout">recvMessageTimeout()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#update">update()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#rtcmanager-api">RtcManager API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#id2">Constructor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#begin">begin()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#getdatetime">getDateTime()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#setdatetime">setDateTime()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#isdatetimevalid">isDateTimeValid()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#gettimestring">getTimeString()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#comparecurrenttimewith">compareCurrentTimeWith()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#isrunning">isRunning()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#applogic-api">AppLogic API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#id3">Constructor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#id4">begin()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#id5">update()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#estructuras-de-datos">Estructuras de Datos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#atmosphericsample">AtmosphericSample</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#groundgpspacket">GroundGpsPacket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#messageheader">MessageHeader</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#constantes-del-sistema">Constantes del Sistema</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#tipos-de-mensaje">Tipos de Mensaje</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#configuracion-de-red">Configuración de Red</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#timeouts-y-delays">Timeouts y Delays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#pines-de-hardware">Pines de Hardware</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#ejemplos-de-uso">Ejemplos de Uso</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#inicializacion-completa">Inicialización Completa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#comunicacion-basica">Comunicación Básica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#programacion-temporal">Programación Temporal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#gestion-de-datos">Gestión de Datos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api_reference.html#manejo-de-errores">Manejo de Errores</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../diagramas_arquitectura.html">📊 Diagramas de Arquitectura - Sistema Gateway Agrícola</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_arquitectura.html#arquitectura-general-del-sistema">🏗️ Arquitectura General del Sistema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_arquitectura.html#flujo-de-datos-del-gateway">🔄 Flujo de Datos del Gateway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_arquitectura.html#estructura-modular-del-codigo">🧩 Estructura Modular del Código</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_arquitectura.html#protocolo-de-comunicacion">📡 Protocolo de Comunicación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_arquitectura.html#estructura-de-datos">🗂️ Estructura de Datos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_arquitectura.html#logs-del-sistema">📊 Logs del Sistema</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../diagramas_arquitectura.html#ejemplo-de-log-de-inicializacion">Ejemplo de Log de Inicialización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../diagramas_arquitectura.html#ejemplo-de-log-de-comunicacion">Ejemplo de Log de Comunicación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../diagramas_arquitectura.html#ejemplo-de-log-de-errores">Ejemplo de Log de Errores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../diagramas_arquitectura.html#ejemplo-de-log-de-datos-de-suelo-gps">Ejemplo de Log de Datos de Suelo/GPS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_arquitectura.html#configuracion-de-hardware">🔧 Configuración de Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_arquitectura.html#metricas-del-sistema">📈 Métricas del Sistema</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../diagramas_arquitectura.html#capacidades-del-gateway">Capacidades del Gateway</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../diagramas_arquitectura.html#consumo-de-memoria">Consumo de Memoria</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../diagramas_arquitectura.html#diagrama-de-conexiones-de-la-placa">Diagrama de Conexiones de la Placa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logs_ejemplo.html">📋 Logs de Ejemplo - Sistema Gateway Agrícola</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../logs_ejemplo.html#logs-de-inicializacion-del-sistema">🔍 Logs de Inicialización del Sistema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../logs_ejemplo.html#logs-de-comunicacion-con-nodos">📡 Logs de Comunicación con Nodos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../logs_ejemplo.html#registro-de-nuevos-nodos">Registro de Nuevos Nodos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../logs_ejemplo.html#solicitud-de-datos-atmosfericos">Solicitud de Datos Atmosféricos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../logs_ejemplo.html#solicitud-de-datos-de-suelo-gps">Solicitud de Datos de Suelo/GPS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../logs_ejemplo.html#logs-de-errores-y-advertencias">⚠️ Logs de Errores y Advertencias</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../logs_ejemplo.html#timeout-en-comunicacion">Timeout en Comunicación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../logs_ejemplo.html#error-en-datos-recibidos">Error en Datos Recibidos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../logs_ejemplo.html#error-de-rtc">Error de RTC</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../logs_ejemplo.html#logs-de-estado-del-sistema">📊 Logs de Estado del Sistema</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../logs_ejemplo.html#estado-de-memoria">Estado de Memoria</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../logs_ejemplo.html#resumen-diario">Resumen Diario</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../logs_ejemplo.html#logs-de-debug">🔧 Logs de Debug</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../logs_ejemplo.html#debug-de-comparacion-de-tiempo">Debug de Comparación de Tiempo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../logs_ejemplo.html#debug-de-almacenamiento-de-datos">Debug de Almacenamiento de Datos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ejemplos_tutoriales.html">📚 Ejemplos y Tutoriales - Sistema Gateway Agrícola</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#enfoque-de-esta-guia">🎯 Enfoque de esta Guía</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#ejemplos-de-codigo">🚀 Ejemplos de Código</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#configuracion-basica-del-gateway">📡 Configuración Básica del Gateway</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#configuracion-de-hardware">🔧 Configuración de Hardware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#acceso-a-datos">📊 Acceso a Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#tutoriales-externos">🔗 Tutoriales Externos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#arduino-y-esp8266">📚 Arduino y ESP8266</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#desarrollo-y-debugging">🛠️ Desarrollo y Debugging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#documentacion-tecnica">📊 Documentación Técnica</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#casos-de-uso-comunes">🎯 Casos de Uso Comunes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#debugging-de-comunicacion">🔍 Debugging de Comunicación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#configuracion-de-red">⚙️ Configuración de Red</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#monitoreo-de-memoria">📈 Monitoreo de Memoria</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#herramientas-recomendadas">🔧 Herramientas Recomendadas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#ides-y-editores">📱 IDEs y Editores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#herramientas-de-debugging">🔍 Herramientas de Debugging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#analisis-de-datos">📊 Análisis de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#solucion-de-problemas">🚨 Solución de Problemas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#problemas-comunes">❌ Problemas Comunes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#recursos-de-ayuda">🔗 Recursos de Ayuda</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#notas-de-desarrollo">📝 Notas de Desarrollo</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#mejores-practicas">🎯 Mejores Prácticas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#optimizaciones">⚡ Optimizaciones</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../diagramas_codigo/README.html">📊 Diagramas de Código - Sistema Gateway Agrícola</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_codigo/README.html#diagramas-generados">🎯 Diagramas Generados</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../diagramas_codigo/README.html#flujo-principal">🔄 Flujo Principal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../diagramas_codigo/README.html#diagrama-de-clases">🏗️ Diagrama de Clases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../diagramas_codigo/README.html#diagrama-de-secuencia">⏱️ Diagrama de Secuencia</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_codigo/README.html#herramientas-utilizadas">🛠️ Herramientas Utilizadas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_codigo/README.html#estadisticas">📈 Estadísticas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_codigo/README.html#integracion">🔗 Integración</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="README.html">📊 Diagramas Avanzados - Sistema Gateway Agrícola</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="README.html#diagramas-generados">🎯 Diagramas Generados</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="README.html#flujo-avanzado">🔄 Flujo Avanzado</a></li>
+<li class="toctree-l4"><a class="reference internal" href="README.html#llamadas-de-funciones">📞 Llamadas de Funciones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="README.html#flujo-de-datos">📊 Flujo de Datos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="README.html#estados-del-sistema">🎯 Estados del Sistema</a></li>
+<li class="toctree-l4"><a class="reference internal" href="README.html#graphviz">🎨 Graphviz</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="README.html#herramientas-utilizadas">🛠️ Herramientas Utilizadas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="README.html#estadisticas">📈 Estadísticas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="README.html#visualizacion">🔗 Visualización</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="README.html#mermaid">Mermaid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="README.html#id1">Graphviz</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="README.html#notas">📝 Notas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../herramientas_diagramas.html">🎨 Herramientas para Generar Diagramas de Código</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#scripts-python-disponibles">🐍 <strong>Scripts Python Disponibles</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#generate-flowcharts-py">📊 <strong>generate_flowcharts.py</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#generate-advanced-diagrams-py">🚀 <strong>generate_advanced_diagrams.py</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#install-diagram-deps-py">📦 <strong>install_diagram_deps.py</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#tipos-de-diagramas-generados">🎯 <strong>Tipos de Diagramas Generados</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#diagramas-de-flujo">🔄 <strong>Diagramas de Flujo</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#diagramas-de-clases">🏗️ <strong>Diagramas de Clases</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#diagramas-de-secuencia">⏱️ <strong>Diagramas de Secuencia</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#graficos-de-llamadas">📞 <strong>Gráficos de Llamadas</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#diagramas-de-flujo-de-datos">📊 <strong>Diagramas de Flujo de Datos</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#diagramas-de-estados">🎯 <strong>Diagramas de Estados</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#herramientas-externas">🛠️ <strong>Herramientas Externas</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#mermaid">📈 <strong>Mermaid</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#graphviz">🎨 <strong>Graphviz</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#pyflowchart">📊 <strong>PyFlowchart</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#networkx">🔍 <strong>NetworkX</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#comandos-utiles">📋 <strong>Comandos Útiles</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#instalar-dependencias">🔧 <strong>Instalar Dependencias</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#generar-diagramas">📊 <strong>Generar Diagramas</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#convertir-formatos">🎨 <strong>Convertir Formatos</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#regenerar-documentacion">📖 <strong>Regenerar Documentación</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#casos-de-uso">🎯 <strong>Casos de Uso</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#analisis-de-codigo">🔍 <strong>Análisis de Código</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#documentacion">📚 <strong>Documentación</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#mantenimiento">🛠️ <strong>Mantenimiento</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#integracion-con-sphinx">🚀 <strong>Integración con Sphinx</strong></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#configuracion">📄 <strong>Configuración</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../herramientas_diagramas.html#uso-en-documentacion">📝 <strong>Uso en Documentación</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../herramientas_diagramas.html#en-archivos-rst">En archivos .rst</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html">Contribución al Proyecto</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#como-contribuir">Cómo Contribuir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../contributing.html#reportar-problemas">Reportar Problemas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../contributing.html#proponer-mejoras">Proponer Mejoras</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../contributing.html#enviar-pull-requests">Enviar Pull Requests</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#estandares-de-codigo">Estándares de Código</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../contributing.html#formato-de-codigo">Formato de Código</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../contributing.html#estructura-de-archivos">Estructura de Archivos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../contributing.html#convenciones-de-git">Convenciones de Git</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#testing">Testing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../contributing.html#tests-unitarios">Tests Unitarios</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../contributing.html#tests-de-integracion">Tests de Integración</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#documentacion">Documentación</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../contributing.html#estandares-de-documentacion">Estándares de Documentación</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#proceso-de-review">Proceso de Review</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../contributing.html#criterios-de-aceptacion">Criterios de Aceptación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../contributing.html#id11">Proceso de Review</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#comunicacion">Comunicación</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../contributing.html#canales-de-comunicacion">Canales de Comunicación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../contributing.html#codigo-de-conducta">Código de Conducta</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#reconocimiento">Reconocimiento</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../contributing.html#contribuidores">Contribuidores</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Componentes del Sistema:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../main_gateway.html">main_gateway.ino - Punto de Entrada del Sistema Gateway</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../main_gateway.html#descripcion-general">📋 Descripción General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../main_gateway.html#arquitectura-del-sistema">🏗️ Arquitectura del Sistema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#componentes-principales">Componentes Principales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#inicializacion-dinamica">Inicialización Dinámica</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../main_gateway.html#estructura-del-archivo">📁 Estructura del Archivo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#includes-y-dependencias">Includes y Dependencias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#variables-globales">Variables Globales</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../main_gateway.html#funcion-setup">🔧 Función setup()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#descripcion">Descripción</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#secuencia-de-inicializacion">Secuencia de Inicialización</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#configuracion-inicial">1. Configuración Inicial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#creacion-de-nodeidentity">2. Creación de NodeIdentity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#inicializacion-de-radiomanager">3. Inicialización de RadioManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#inicializacion-de-rtcmanager">4. Inicialización de RtcManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#creacion-de-applogic">5. Creación de AppLogic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../main_gateway.html#verificacion-final">6. Verificación Final</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../main_gateway.html#funcion-loop">🔄 Función loop()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#id1">Descripción</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#implementacion">Implementación</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../main_gateway.html#caracteristicas-tecnicas">🔍 Características Técnicas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#id2">1. Inicialización Dinámica</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#manejo-de-errores">2. Manejo de Errores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#optimizacion-de-energia">3. Optimización de Energía</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#debugging-avanzado">4. Debugging Avanzado</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../main_gateway.html#flujo-de-ejecucion">📊 Flujo de Ejecución</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#fase-1-inicializacion">Fase 1: Inicialización</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#fase-2-operacion">Fase 2: Operación</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../main_gateway.html#configuracion-y-personalizacion">🔧 Configuración y Personalización</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#parametros-de-configuracion">Parámetros de Configuración</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#personalizacion">Personalización</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../main_gateway.html#consideraciones-importantes">🚨 Consideraciones Importantes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#orden-de-inicializacion">1. Orden de Inicialización</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#gestion-de-memoria">2. Gestión de Memoria</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#robustez-del-sistema">3. Robustez del Sistema</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../main_gateway.html#metricas-de-rendimiento">📈 Métricas de Rendimiento</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#tiempos-de-inicializacion">Tiempos de Inicialización</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#uso-de-recursos">Uso de Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../main_gateway.html#mejoras-futuras">🔮 Mejoras Futuras</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#fase-1-optimizaciones">Fase 1: Optimizaciones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#fase-2-nuevas-funcionalidades">Fase 2: Nuevas Funcionalidades</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../main_gateway.html#fase-3-integracion">Fase 3: Integración</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../config.html">config.h - Configuración Central del Sistema Gateway</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../config.html#descripcion-general">📋 Descripción General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html#estructura-de-configuracion">🏗️ Estructura de Configuración</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#modos-de-operacion">Modos de Operación</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#modo-debug">Modo Debug</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#modo-produccion">Modo Producción</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html#parametros-de-red">📊 Parámetros de Red</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#configuracion-de-nodos">Configuración de Nodos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#timeouts-y-delays">Timeouts y Delays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#delays-de-procesamiento">Delays de Procesamiento</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html#configuracion-de-hardware">🔧 Configuración de Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#comunicacion-lora">Comunicación LoRa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#rtc-ds1302-3-wire-interface">RTC DS1302 (3-wire interface)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#configuracion-de-comunicacion">Configuración de Comunicación</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html#macros-de-debugging">🔍 Macros de Debugging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#sistema-de-logging">Sistema de Logging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html#configuraciones-avanzadas">📈 Configuraciones Avanzadas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#parametros-de-comunicacion">Parámetros de Comunicación</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html#personalizacion-y-optimizacion">🔧 Personalización y Optimización</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#modificacion-de-parametros">Modificación de Parámetros</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#cambio-de-pines">1. Cambio de Pines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#ajuste-de-timeouts">2. Ajuste de Timeouts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../config.html#configuracion-de-red">3. Configuración de Red</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html#consideraciones-importantes">🚨 Consideraciones Importantes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#compatibilidad-de-hardware">1. Compatibilidad de Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#optimizacion-de-energia">2. Optimización de Energía</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#escalabilidad">3. Escalabilidad</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html#metricas-de-configuracion">📊 Métricas de Configuración</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#uso-de-recursos">Uso de Recursos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#optimizaciones">Optimizaciones</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html#mejoras-futuras">🔮 Mejoras Futuras</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#fase-1-configuracion-dinamica">Fase 1: Configuración Dinámica</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#fase-2-optimizaciones-avanzadas">Fase 2: Optimizaciones Avanzadas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#fase-3-integracion">Fase 3: Integración</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html#checklist-de-configuracion">📋 Checklist de Configuración</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#antes-del-despliegue">Antes del Despliegue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../config.html#durante-la-operacion">Durante la Operación</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../node_identity.html">NodeIdentity - Gestión de Identidad Única del Gateway</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../node_identity.html#descripcion-general">📋 Descripción General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../node_identity.html#arquitectura-de-la-clase">🏗️ Arquitectura de la Clase</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#proposito-principal">Propósito Principal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#caracteristicas-tecnicas">Características Técnicas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../node_identity.html#estructura-de-la-clase">📁 Estructura de la Clase</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#constantes-y-definiciones">Constantes y Definiciones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#variables-de-instancia">Variables de Instancia</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../node_identity.html#metodos-publicos">🔧 Métodos Públicos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#constructor">Constructor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#getnodeid">getNodeID()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#getdevicemac">getDeviceMAC()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#savegetway">saveGetway()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#getgetway">getGetway()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#changenodeid">changeNodeID()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#begin">begin()</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../node_identity.html#metodos-privados">🔧 Métodos Privados</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#generatesafehash">generateSafeHash()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#crc8">crc8()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#loadbytefromfile">loadByteFromFile()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#savebytetofile">saveByteToFile()</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../node_identity.html#algoritmo-de-generacion-de-id">📊 Algoritmo de Generación de ID</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#paso-1-obtencion-de-mac">Paso 1: Obtención de MAC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#paso-2-generacion-de-hash">Paso 2: Generación de Hash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#paso-3-validacion-contra-lista-negra">Paso 3: Validación contra Lista Negra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#paso-4-persistencia">Paso 4: Persistencia</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../node_identity.html#caracteristicas-de-seguridad">🔍 Características de Seguridad</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#proteccion-contra-colisiones">1. Protección contra Colisiones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#persistencia-robusta">2. Persistencia Robusta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#optimizacion-de-energia">3. Optimización de Energía</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../node_identity.html#metricas-de-rendimiento">📈 Métricas de Rendimiento</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#tiempos-de-operacion">Tiempos de Operación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#uso-de-recursos">Uso de Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../node_identity.html#consideraciones-importantes">🚨 Consideraciones Importantes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#dependencias-de-hardware">1. Dependencias de Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#gestion-de-errores">2. Gestión de Errores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#escalabilidad">3. Escalabilidad</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../node_identity.html#mejoras-futuras">🔮 Mejoras Futuras</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#fase-1-optimizaciones">Fase 1: Optimizaciones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#fase-2-nuevas-funcionalidades">Fase 2: Nuevas Funcionalidades</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#fase-3-integracion">Fase 3: Integración</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../node_identity.html#ejemplos-de-uso">📋 Ejemplos de Uso</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#ejemplo-1-inicializacion-basica">Ejemplo 1: Inicialización Básica</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#ejemplo-2-gestion-de-gateway">Ejemplo 2: Gestión de Gateway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node_identity.html#ejemplo-3-cambio-de-id">Ejemplo 3: Cambio de ID</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../radio_manager.html">RadioManager - Gestión de Comunicación LoRa Mesh</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../radio_manager.html#descripcion-general">📋 Descripción General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../radio_manager.html#arquitectura-de-la-clase">🏗️ Arquitectura de la Clase</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#proposito-principal">Propósito Principal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#caracteristicas-tecnicas">Características Técnicas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../radio_manager.html#estructura-de-la-clase">📁 Estructura de la Clase</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#variables-de-instancia">Variables de Instancia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#dependencias">Dependencias</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../radio_manager.html#metodos-publicos">🔧 Métodos Públicos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#constructor">Constructor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#init">init()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#sendmessage">sendMessage()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#recvmessage">recvMessage()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#recvmessagetimeout">recvMessageTimeout()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#update">update()</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../radio_manager.html#configuracion-de-hardware">📊 Configuración de Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#pines-de-conexion">Pines de Conexión</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#configuracion-spi">Configuración SPI</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../radio_manager.html#caracteristicas-de-comunicacion">🔍 Características de Comunicación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#protocolo-lora">1. Protocolo LoRa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#enrutamiento-mesh">2. Enrutamiento Mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#gestion-de-red">3. Gestión de Red</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../radio_manager.html#metricas-de-rendimiento">📈 Métricas de Rendimiento</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#tiempos-de-operacion">Tiempos de Operación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#capacidades-de-red">Capacidades de Red</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#uso-de-recursos">Uso de Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../radio_manager.html#consideraciones-importantes">🚨 Consideraciones Importantes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#id1">1. Configuración de Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#gestion-de-errores">2. Gestión de Errores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#optimizacion-de-red">3. Optimización de Red</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../radio_manager.html#mejoras-futuras">🔮 Mejoras Futuras</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#fase-1-optimizaciones">Fase 1: Optimizaciones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#fase-2-nuevas-funcionalidades">Fase 2: Nuevas Funcionalidades</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#fase-3-integracion">Fase 3: Integración</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../radio_manager.html#ejemplos-de-uso">📋 Ejemplos de Uso</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#ejemplo-1-inicializacion-basica">Ejemplo 1: Inicialización Básica</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#ejemplo-2-envio-de-mensaje">Ejemplo 2: Envío de Mensaje</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#ejemplo-3-recepcion-con-timeout">Ejemplo 3: Recepción con Timeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../radio_manager.html#ejemplo-4-bucle-de-comunicacion">Ejemplo 4: Bucle de Comunicación</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rtc_manager.html">RtcManager - Gestor del Módulo RTC DS1307</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rtc_manager.html#descripcion-general">Descripción General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rtc_manager.html#caracteristicas-tecnicas">Características Técnicas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#hardware">Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#comunicacion">Comunicación</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rtc_manager.html#estructura-de-la-clase">Estructura de la Clase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rtc_manager.html#metodos-principales">Métodos Principales</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#constructor">Constructor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#inicializacion">Inicialización</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#obtencion-de-fecha-hora">Obtención de Fecha/Hora</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#configuracion-de-fecha-hora">Configuración de Fecha/Hora</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#validacion-de-fecha-hora">Validación de Fecha/Hora</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#obtencion-de-hora-como-string">Obtención de Hora como String</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#comparacion-de-horas">Comparación de Horas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#impresion-de-fecha-hora">Impresión de Fecha/Hora</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#verificacion-de-estado">Verificación de Estado</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rtc_manager.html#ejemplo-de-uso">Ejemplo de Uso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rtc_manager.html#configuracion-de-hardware">Configuración de Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#conexiones-i2c">Conexiones I2C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#notas-importantes">Notas Importantes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rtc_manager.html#manejo-de-errores">Manejo de Errores</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#errores-comunes">Errores Comunes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#diagnostico">Diagnóstico</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rtc_manager.html#optimizaciones-implementadas">Optimizaciones Implementadas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#debug-reducido">Debug Reducido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#validaciones">Validaciones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rtc_manager.html#compatibilidad">Compatibilidad</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rtc_manager.html#diferencias-con-ds1302">Diferencias con DS1302</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rtc_manager.html#notas-de-implementacion">Notas de Implementación</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../app_logic.html">AppLogic - Lógica de Aplicación del Gateway</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../app_logic.html#descripcion-general">📋 Descripción General</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../app_logic.html#arquitectura-de-la-clase">🏗️ Arquitectura de la Clase</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#proposito-principal">Propósito Principal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#caracteristicas-tecnicas">Características Técnicas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../app_logic.html#estructura-de-la-clase">📁 Estructura de la Clase</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#variables-de-instancia">Variables de Instancia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#almacenamiento-de-datos">Almacenamiento de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../app_logic.html#metodos-publicos">🔧 Métodos Públicos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#constructor">Constructor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#begin">begin()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#update">update()</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../app_logic.html#metodos-privados">🔧 Métodos Privados</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#sendannounce">sendAnnounce()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#handlehello">handleHello()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#registernewnode">registerNewNode()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#requestatmosphericdata">requestAtmosphericData()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#requestgroundgpsdata">requestGroundGpsData()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#handleuartrequest">handleUartRequest()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#sendchangeid">sendChangeID()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#timer">timer()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#comparehsandms">compareHsAndMs()</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../app_logic.html#gestion-de-datos">📊 Gestión de Datos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#estructuras-de-almacenamiento">Estructuras de Almacenamiento</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#muestras-atmosfericas">Muestras Atmosféricas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#muestras-de-suelo-gps">Muestras de Suelo/GPS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#gestion-de-nodos">Gestión de Nodos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#nodos-activos">Nodos Activos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#nodos-inactivos">Nodos Inactivos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../app_logic.html#protocolo-de-comunicacion">🔍 Protocolo de Comunicación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#tipos-de-mensajes">Tipos de Mensajes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#hello">HELLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#announce">ANNOUNCE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#data-request">DATA_REQUEST</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#data-response">DATA_RESPONSE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#flujo-de-comunicacion">Flujo de Comunicación</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#descubrimiento-de-nodos">1. Descubrimiento de Nodos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#solicitud-de-datos">2. Solicitud de Datos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../app_logic.html#anuncios-periodicos">3. Anuncios Periódicos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../app_logic.html#metricas-de-rendimiento">📈 Métricas de Rendimiento</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#tiempos-de-operacion">Tiempos de Operación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#capacidades-de-red">Capacidades de Red</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#uso-de-recursos">Uso de Recursos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../app_logic.html#consideraciones-importantes">🚨 Consideraciones Importantes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#gestion-de-memoria">1. Gestión de Memoria</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#robustez-de-red">2. Robustez de Red</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#escalabilidad">3. Escalabilidad</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../app_logic.html#mejoras-futuras">🔮 Mejoras Futuras</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#fase-1-optimizaciones">Fase 1: Optimizaciones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#fase-2-nuevas-funcionalidades">Fase 2: Nuevas Funcionalidades</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#fase-3-integracion">Fase 3: Integración</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../app_logic.html#ejemplos-de-uso">📋 Ejemplos de Uso</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#ejemplo-1-inicializacion-basica">Ejemplo 1: Inicialización Básica</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#ejemplo-2-monitoreo-de-nodos">Ejemplo 2: Monitoreo de Nodos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#ejemplo-3-acceso-a-datos">Ejemplo 3: Acceso a Datos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#ejemplo-4-programacion-temporal">Ejemplo 4: Programación Temporal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../app_logic.html#ejemplo-5-gestion-de-errores">Ejemplo 5: Gestión de Errores</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Guías de Uso:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Instalación del Sistema Gateway</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#requisitos-del-sistema">Requisitos del Sistema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#hardware-requerido">Hardware Requerido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#software-requerido">Software Requerido</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#instalacion-del-entorno-de-desarrollo">Instalación del Entorno de Desarrollo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#instalar-platformio">1. Instalar PlatformIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#clonar-el-repositorio">2. Clonar el Repositorio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#instalar-dependencias">3. Instalar Dependencias</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#configuracion-del-hardware">Configuración del Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#diagrama-de-conexiones">Diagrama de Conexiones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#pasos-de-conexion">Pasos de Conexión</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#configuracion-del-software">Configuración del Software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#configurar-platformio">1. Configurar PlatformIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#configurar-parametros">2. Configurar Parámetros</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#compilacion-y-subida">Compilación y Subida</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#compilar-el-proyecto">1. Compilar el Proyecto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#subir-firmware">2. Subir Firmware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#verificar-instalacion">3. Verificar Instalación</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#configuracion-de-red">Configuración de Red</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#configurar-frecuencia-lora">1. Configurar Frecuencia LoRa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#configurar-potencia-de-transmision">2. Configurar Potencia de Transmisión</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#configurar-parametros-de-red">3. Configurar Parámetros de Red</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#verificacion-del-sistema">Verificación del Sistema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#pruebas-basicas">1. Pruebas Básicas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#pruebas-de-red">2. Pruebas de Red</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#pruebas-de-datos">3. Pruebas de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#solucion-de-problemas">Solución de Problemas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#problemas-comunes">Problemas Comunes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#comandos-de-diagnostico">Comandos de Diagnóstico</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#proximos-pasos">Próximos Pasos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuración del Sistema Gateway</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#configuracion-de-hardware">Configuración de Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#pines-de-conexion">Pines de Conexión</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#esp8266-sx1278-lora">ESP8266 - SX1278 LoRa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration.html#esp8266-ds1302-rtc">ESP8266 - DS1302 RTC</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#configuracion-de-red">Configuración de Red</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#parametros-lora">Parámetros LoRa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#parametros-de-red-mesh">Parámetros de Red Mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#timeouts-y-delays">Timeouts y Delays</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#configuracion-de-datos">Configuración de Datos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#muestras-por-nodo">Muestras por Nodo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#delays-de-procesamiento">Delays de Procesamiento</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#configuracion-de-debugging">Configuración de Debugging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#modo-debug">Modo Debug</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#configuracion-de-nodeidentity">Configuración de NodeIdentity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#archivos-de-persistencia">Archivos de Persistencia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#valores-por-defecto">Valores por Defecto</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#configuracion-de-radiomanager">Configuración de RadioManager</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#parametros-de-inicializacion">Parámetros de Inicialización</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#configuracion-de-rtcmanager">Configuración de RtcManager</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#id1">Parámetros de Inicialización</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#configuracion-de-applogic">Configuración de AppLogic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#horarios-de-muestreo">Horarios de Muestreo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#parametros-de-reintentos">Parámetros de Reintentos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#configuracion-avanzada">Configuración Avanzada</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#optimizacion-de-memoria">Optimización de Memoria</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#optimizacion-de-energia">Optimización de Energía</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#configuracion-de-seguridad">Configuración de Seguridad</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#configuracion-por-entorno">Configuración por Entorno</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#desarrollo">Desarrollo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#produccion">Producción</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#testing">Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#configuracion-de-monitoreo">Configuración de Monitoreo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#logging">Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#metricas">Métricas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#alertas">Alertas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#configuracion-de-red-mesh">Configuración de Red Mesh</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#topologia">Topología</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#enrutamiento">Enrutamiento</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#configuracion-de-protocolo">Configuración de Protocolo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#tipos-de-mensaje">Tipos de Mensaje</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#estructura-de-mensaje">Estructura de Mensaje</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#validacion">Validación</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#configuracion-de-persistencia">Configuración de Persistencia</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#littlefs">LittleFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#backup">Backup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#configuracion-de-actualizaciones">Configuración de Actualizaciones</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#ota-over-the-air">OTA (Over-The-Air)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#verificacion">Verificación</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#configuracion-de-integracion">Configuración de Integración</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#apis-externas">APIs Externas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#webhooks">Webhooks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration.html#configuracion-de-diagnostico">Configuración de Diagnóstico</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#diagnostico-de-hardware">Diagnóstico de Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration.html#metricas-de-rendimiento">Métricas de Rendimiento</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Solución de Problemas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html#problemas-de-compilacion">Problemas de Compilación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#error-radiohead-library-not-found">Error: «RadioHead library not found»</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#error-rtcds1302-library-not-found">Error: «RtcDS1302 library not found»</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#error-littlefs-library-not-found">Error: «LittleFS library not found»</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#error-de-memoria-insuficiente">Error de Memoria Insuficiente</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html#problemas-de-subida">Problemas de Subida</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#error-failed-to-connect-to-esp8266">Error: «Failed to connect to ESP8266»</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#error-upload-failed">Error: «Upload failed»</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html#problemas-de-hardware">Problemas de Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#error-de-comunicacion-lora">Error de Comunicación LoRa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#error-de-rtc">Error de RTC</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html#problemas-de-red">Problemas de Red</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#nodos-no-detectados">Nodos No Detectados</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#perdida-de-paquetes">Pérdida de Paquetes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html#problemas-de-memoria">Problemas de Memoria</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#desbordamiento-de-memoria">Desbordamiento de Memoria</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html#problemas-de-energia">Problemas de Energía</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#consumo-excesivo">Consumo Excesivo</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html#problemas-de-datos">Problemas de Datos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#datos-corruptos">Datos Corruptos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html#problemas-de-configuracion">Problemas de Configuración</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#configuracion-no-persistente">Configuración No Persistente</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html#comandos-de-diagnostico">Comandos de Diagnóstico</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#verificar-estado-del-sistema">Verificar Estado del Sistema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#verificar-memoria">Verificar Memoria</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#verificar-red">Verificar Red</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#verificar-rtc">Verificar RTC</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html#logs-de-diagnostico">Logs de Diagnóstico</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#habilitar-logs-detallados">Habilitar Logs Detallados</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../troubleshooting.html#interpretar-logs">Interpretar Logs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html#contacto-y-soporte">Contacto y Soporte</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api_reference.html">Referencia de API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference.html#nodeidentity-api">NodeIdentity API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#constructor">Constructor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#getnodeid">getNodeID()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#getdevicemac">getDeviceMAC()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#savegetway">saveGetway()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#getgetway">getGetway()</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference.html#radiomanager-api">RadioManager API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#id1">Constructor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#init">init()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#sendmessage">sendMessage()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#recvmessage">recvMessage()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#recvmessagetimeout">recvMessageTimeout()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#update">update()</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference.html#rtcmanager-api">RtcManager API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#id2">Constructor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#begin">begin()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#getdatetime">getDateTime()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#setdatetime">setDateTime()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#isdatetimevalid">isDateTimeValid()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#gettimestring">getTimeString()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#comparecurrenttimewith">compareCurrentTimeWith()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#isrunning">isRunning()</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference.html#applogic-api">AppLogic API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#id3">Constructor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#id4">begin()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#id5">update()</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference.html#estructuras-de-datos">Estructuras de Datos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#atmosphericsample">AtmosphericSample</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#groundgpspacket">GroundGpsPacket</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#messageheader">MessageHeader</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference.html#constantes-del-sistema">Constantes del Sistema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#tipos-de-mensaje">Tipos de Mensaje</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#configuracion-de-red">Configuración de Red</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#timeouts-y-delays">Timeouts y Delays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#pines-de-hardware">Pines de Hardware</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api_reference.html#ejemplos-de-uso">Ejemplos de Uso</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#inicializacion-completa">Inicialización Completa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#comunicacion-basica">Comunicación Básica</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#programacion-temporal">Programación Temporal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#gestion-de-datos">Gestión de Datos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api_reference.html#manejo-de-errores">Manejo de Errores</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Diagramas y Arquitectura:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../diagramas_arquitectura.html">📊 Diagramas de Arquitectura - Sistema Gateway Agrícola</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../diagramas_arquitectura.html#arquitectura-general-del-sistema">🏗️ Arquitectura General del Sistema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../diagramas_arquitectura.html#flujo-de-datos-del-gateway">🔄 Flujo de Datos del Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../diagramas_arquitectura.html#estructura-modular-del-codigo">🧩 Estructura Modular del Código</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../diagramas_arquitectura.html#protocolo-de-comunicacion">📡 Protocolo de Comunicación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../diagramas_arquitectura.html#estructura-de-datos">🗂️ Estructura de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../diagramas_arquitectura.html#logs-del-sistema">📊 Logs del Sistema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_arquitectura.html#ejemplo-de-log-de-inicializacion">Ejemplo de Log de Inicialización</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_arquitectura.html#ejemplo-de-log-de-comunicacion">Ejemplo de Log de Comunicación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_arquitectura.html#ejemplo-de-log-de-errores">Ejemplo de Log de Errores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_arquitectura.html#ejemplo-de-log-de-datos-de-suelo-gps">Ejemplo de Log de Datos de Suelo/GPS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../diagramas_arquitectura.html#configuracion-de-hardware">🔧 Configuración de Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../diagramas_arquitectura.html#metricas-del-sistema">📈 Métricas del Sistema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_arquitectura.html#capacidades-del-gateway">Capacidades del Gateway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_arquitectura.html#consumo-de-memoria">Consumo de Memoria</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../diagramas_arquitectura.html#diagrama-de-conexiones-de-la-placa">Diagrama de Conexiones de la Placa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logs_ejemplo.html">📋 Logs de Ejemplo - Sistema Gateway Agrícola</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../logs_ejemplo.html#logs-de-inicializacion-del-sistema">🔍 Logs de Inicialización del Sistema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logs_ejemplo.html#logs-de-comunicacion-con-nodos">📡 Logs de Comunicación con Nodos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../logs_ejemplo.html#registro-de-nuevos-nodos">Registro de Nuevos Nodos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../logs_ejemplo.html#solicitud-de-datos-atmosfericos">Solicitud de Datos Atmosféricos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../logs_ejemplo.html#solicitud-de-datos-de-suelo-gps">Solicitud de Datos de Suelo/GPS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../logs_ejemplo.html#logs-de-errores-y-advertencias">⚠️ Logs de Errores y Advertencias</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../logs_ejemplo.html#timeout-en-comunicacion">Timeout en Comunicación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../logs_ejemplo.html#error-en-datos-recibidos">Error en Datos Recibidos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../logs_ejemplo.html#error-de-rtc">Error de RTC</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../logs_ejemplo.html#logs-de-estado-del-sistema">📊 Logs de Estado del Sistema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../logs_ejemplo.html#estado-de-memoria">Estado de Memoria</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../logs_ejemplo.html#resumen-diario">Resumen Diario</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../logs_ejemplo.html#logs-de-debug">🔧 Logs de Debug</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../logs_ejemplo.html#debug-de-comparacion-de-tiempo">Debug de Comparación de Tiempo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../logs_ejemplo.html#debug-de-almacenamiento-de-datos">Debug de Almacenamiento de Datos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ejemplos_tutoriales.html">📚 Ejemplos y Tutoriales - Sistema Gateway Agrícola</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ejemplos_tutoriales.html#enfoque-de-esta-guia">🎯 Enfoque de esta Guía</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ejemplos_tutoriales.html#ejemplos-de-codigo">🚀 Ejemplos de Código</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#configuracion-basica-del-gateway">📡 Configuración Básica del Gateway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#configuracion-de-hardware">🔧 Configuración de Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#acceso-a-datos">📊 Acceso a Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ejemplos_tutoriales.html#tutoriales-externos">🔗 Tutoriales Externos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#arduino-y-esp8266">📚 Arduino y ESP8266</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#tutoriales-basicos"><strong>Tutoriales Básicos</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#comunicacion-lora"><strong>Comunicación LoRa</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#rtc-y-tiempo"><strong>RTC y Tiempo</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#desarrollo-y-debugging">🛠️ Desarrollo y Debugging</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#platformio"><strong>PlatformIO</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#git-y-versionado"><strong>Git y Versionado</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#documentacion-tecnica">📊 Documentación Técnica</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#sphinx-y-autodoc"><strong>Sphinx y Autodoc</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#markdown-y-restructuredtext"><strong>Markdown y reStructuredText</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ejemplos_tutoriales.html#casos-de-uso-comunes">🎯 Casos de Uso Comunes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#debugging-de-comunicacion">🔍 Debugging de Comunicación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#configuracion-de-red">⚙️ Configuración de Red</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#monitoreo-de-memoria">📈 Monitoreo de Memoria</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ejemplos_tutoriales.html#herramientas-recomendadas">🔧 Herramientas Recomendadas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#ides-y-editores">📱 IDEs y Editores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#herramientas-de-debugging">🔍 Herramientas de Debugging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#analisis-de-datos">📊 Análisis de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ejemplos_tutoriales.html#solucion-de-problemas">🚨 Solución de Problemas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#problemas-comunes">❌ Problemas Comunes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#radio-no-inicializa"><strong>Radio no inicializa</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#rtc-no-responde"><strong>RTC no responde</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ejemplos_tutoriales.html#memoria-insuficiente"><strong>Memoria insuficiente</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#recursos-de-ayuda">🔗 Recursos de Ayuda</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ejemplos_tutoriales.html#notas-de-desarrollo">📝 Notas de Desarrollo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#mejores-practicas">🎯 Mejores Prácticas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ejemplos_tutoriales.html#optimizaciones">⚡ Optimizaciones</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Diagramas de Código:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../diagramas_codigo/README.html">📊 Diagramas de Código - Sistema Gateway Agrícola</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../diagramas_codigo/README.html#diagramas-generados">🎯 Diagramas Generados</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_codigo/README.html#flujo-principal">🔄 Flujo Principal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_codigo/README.html#diagrama-de-clases">🏗️ Diagrama de Clases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../diagramas_codigo/README.html#diagrama-de-secuencia">⏱️ Diagrama de Secuencia</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../diagramas_codigo/README.html#herramientas-utilizadas">🛠️ Herramientas Utilizadas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../diagramas_codigo/README.html#estadisticas">📈 Estadísticas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../diagramas_codigo/README.html#integracion">🔗 Integración</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="README.html">📊 Diagramas Avanzados - Sistema Gateway Agrícola</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="README.html#diagramas-generados">🎯 Diagramas Generados</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="README.html#flujo-avanzado">🔄 Flujo Avanzado</a></li>
+<li class="toctree-l3"><a class="reference internal" href="README.html#llamadas-de-funciones">📞 Llamadas de Funciones</a></li>
+<li class="toctree-l3"><a class="reference internal" href="README.html#flujo-de-datos">📊 Flujo de Datos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="README.html#estados-del-sistema">🎯 Estados del Sistema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="README.html#graphviz">🎨 Graphviz</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="README.html#herramientas-utilizadas">🛠️ Herramientas Utilizadas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="README.html#estadisticas">📈 Estadísticas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="README.html#visualizacion">🔗 Visualización</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="README.html#mermaid">Mermaid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="README.html#id1">Graphviz</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="README.html#notas">📝 Notas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../herramientas_diagramas.html">🎨 Herramientas para Generar Diagramas de Código</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../herramientas_diagramas.html#scripts-python-disponibles">🐍 <strong>Scripts Python Disponibles</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#generate-flowcharts-py">📊 <strong>generate_flowcharts.py</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#generate-advanced-diagrams-py">🚀 <strong>generate_advanced_diagrams.py</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#install-diagram-deps-py">📦 <strong>install_diagram_deps.py</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../herramientas_diagramas.html#tipos-de-diagramas-generados">🎯 <strong>Tipos de Diagramas Generados</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#diagramas-de-flujo">🔄 <strong>Diagramas de Flujo</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#diagramas-de-clases">🏗️ <strong>Diagramas de Clases</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#diagramas-de-secuencia">⏱️ <strong>Diagramas de Secuencia</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#graficos-de-llamadas">📞 <strong>Gráficos de Llamadas</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#diagramas-de-flujo-de-datos">📊 <strong>Diagramas de Flujo de Datos</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#diagramas-de-estados">🎯 <strong>Diagramas de Estados</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../herramientas_diagramas.html#herramientas-externas">🛠️ <strong>Herramientas Externas</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#mermaid">📈 <strong>Mermaid</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#graphviz">🎨 <strong>Graphviz</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#pyflowchart">📊 <strong>PyFlowchart</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#networkx">🔍 <strong>NetworkX</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../herramientas_diagramas.html#comandos-utiles">📋 <strong>Comandos Útiles</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#instalar-dependencias">🔧 <strong>Instalar Dependencias</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#generar-diagramas">📊 <strong>Generar Diagramas</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#convertir-formatos">🎨 <strong>Convertir Formatos</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#regenerar-documentacion">📖 <strong>Regenerar Documentación</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../herramientas_diagramas.html#casos-de-uso">🎯 <strong>Casos de Uso</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#analisis-de-codigo">🔍 <strong>Análisis de Código</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#documentacion">📚 <strong>Documentación</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#mantenimiento">🛠️ <strong>Mantenimiento</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../herramientas_diagramas.html#integracion-con-sphinx">🚀 <strong>Integración con Sphinx</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#configuracion">📄 <strong>Configuración</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../herramientas_diagramas.html#uso-en-documentacion">📝 <strong>Uso en Documentación</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../herramientas_diagramas.html#en-archivos-rst">En archivos .rst</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Desarrollo:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contribución al Proyecto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#como-contribuir">Cómo Contribuir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#reportar-problemas">Reportar Problemas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#proponer-mejoras">Proponer Mejoras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#enviar-pull-requests">Enviar Pull Requests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#estandares-de-codigo">Estándares de Código</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#formato-de-codigo">Formato de Código</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#estructura-de-archivos">Estructura de Archivos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#convenciones-de-git">Convenciones de Git</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#testing">Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#tests-unitarios">Tests Unitarios</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#tests-de-integracion">Tests de Integración</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#documentacion">Documentación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#estandares-de-documentacion">Estándares de Documentación</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#proceso-de-review">Proceso de Review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#criterios-de-aceptacion">Criterios de Aceptación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#id11">Proceso de Review</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#comunicacion">Comunicación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#canales-de-comunicacion">Canales de Comunicación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#codigo-de-conducta">Código de Conducta</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#reconocimiento">Reconocimiento</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing.html#contribuidores">Contribuidores</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sistema Gateway Agrícola</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">🎯 Diagrama de Estados del Sistema</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/diagramas_avanzados/estados_sistema.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="diagrama-de-estados-del-sistema">
+<h1>🎯 Diagrama de Estados del Sistema<a class="headerlink" href="#diagrama-de-estados-del-sistema" title="Enlace permanente a este encabezado"></a></h1>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>stateDiagram-v2
+    [*] --&gt; Inicialización
+    Inicialización --&gt; Configuración
+    Configuración --&gt; EsperandoNodos
+    EsperandoNodos --&gt; ProcesandoMensajes
+    ProcesandoMensajes --&gt; SolicitandoDatosAtmosféricos
+    SolicitandoDatosAtmosféricos --&gt; RecibiendoDatosAtmosféricos
+    RecibiendoDatosAtmosféricos --&gt; SolicitandoDatosSuelo
+    SolicitandoDatosSuelo --&gt; RecibiendoDatosSuelo
+    RecibiendoDatosSuelo --&gt; EsperandoNodos
+    
+    EsperandoNodos --&gt; ErrorComunicación
+    ErrorComunicación --&gt; EsperandoNodos
+    
+    RecibiendoDatosAtmosféricos --&gt; ErrorDatos
+    ErrorDatos --&gt; SolicitandoDatosAtmosféricos
+    
+    RecibiendoDatosSuelo --&gt; ErrorDatos
+    ErrorDatos --&gt; SolicitandoDatosSuelo
+    
+    EsperandoNodos --&gt; Reinicio
+    Reinicio --&gt; Inicialización
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2025, Equipo de Desarrollo Agrícola.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

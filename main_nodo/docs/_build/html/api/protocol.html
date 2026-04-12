@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protocolo de Comunicación &mdash; documentación de Sistema de Monitoreo Agrícola - 1.0.0</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=14be7d3c"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="Ejemplos de Uso" href="../ejemplos_uso.html" />
+    <link rel="prev" title="Visión General del Sistema" href="../overview/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Sistema de Monitoreo Agrícola
+          </a>
+              <div class="version">
+                1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Índice de Documentación</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Visión General del Sistema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html#id1">Errores Comunes y Decisiones de Diseño</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Protocolo de Comunicación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id1">Protocol</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#descripcion">Descripción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#caracteristicas-principales">Características Principales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#estructuras-de-datos">Estructuras de Datos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#atmosphericsample">AtmosphericSample</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#groundsensor">GroundSensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gpssensor">GpsSensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#energydata">EnergyData</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#constantes-del-sistema">Constantes del Sistema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#valores-de-error">Valores de Error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuracion-de-sensores">Configuración de Sensores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flags-de-validacion-gps">Flags de Validación GPS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ejemplo-de-uso">Ejemplo de Uso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#validacion-de-datos">Validación de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#serializacion-de-datos">Serialización de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optimizaciones-de-memoria">Optimizaciones de Memoria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compatibilidad-de-versiones">Compatibilidad de Versiones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#casos-de-uso">Casos de Uso</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notas-de-implementacion">Notas de Implementación</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ver-tambien">Ver también</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ejemplos_uso.html">Ejemplos de Uso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metricas.html">Métricas de Rendimiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recursos.html">Recursos y Enlaces Externos</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sistema de Monitoreo Agrícola</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Protocolo de Comunicación</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/protocol.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="protocolo-de-comunicacion">
+<span id="protocol"></span><h1>Protocolo de Comunicación<a class="headerlink" href="#protocolo-de-comunicacion" title="Enlace permanente a este encabezado"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p><strong>Actualización:</strong>
+El paquete <code class="docutils literal notranslate"><span class="pre">GroundGpsPacket</span></code> ahora incluye un campo <code class="docutils literal notranslate"><span class="pre">energy</span></code> de tipo <code class="docutils literal notranslate"><span class="pre">EnergyData</span></code> para enviar datos energéticos junto con los datos de suelo y GPS.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">GroundGpsPacket</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">GroundSensor</span><span class="w"> </span><span class="n">ground</span><span class="p">;</span><span class="w"> </span><span class="c1">// Datos de suelo</span>
+<span class="w">    </span><span class="n">GpsSensor</span><span class="w"> </span><span class="n">gps</span><span class="p">;</span><span class="w">       </span><span class="c1">// Datos GPS</span>
+<span class="w">    </span><span class="n">EnergyData</span><span class="w"> </span><span class="n">energy</span><span class="p">;</span><span class="w">   </span><span class="c1">// Datos energéticos (voltaje y corriente)</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Esto permite que el nodo envíe en un solo mensaje los datos de suelo, GPS y energía al gateway.</p>
+</div>
+</section>
+<section id="id1">
+<h1>Protocol<a class="headerlink" href="#id1" title="Enlace permanente a este encabezado"></a></h1>
+<section id="descripcion">
+<h2>Descripción<a class="headerlink" href="#descripcion" title="Enlace permanente a este encabezado"></a></h2>
+<p>El <strong>Protocol</strong> define las estructuras de datos y constantes utilizadas
+en todo el sistema de monitoreo agrícola. Proporciona una interfaz
+unificada para el intercambio de datos entre componentes y la transmisión
+por la red mesh LoRa.</p>
+</section>
+<section id="caracteristicas-principales">
+<h2>Características Principales<a class="headerlink" href="#caracteristicas-principales" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Estructuras Unificadas:</strong> Definiciones consistentes de datos</p></li>
+<li><p><strong>Constantes del Sistema:</strong> Valores de configuración centralizados</p></li>
+<li><p><strong>Tipos de Datos Optimizados:</strong> Uso eficiente de memoria</p></li>
+<li><p><strong>Validación de Datos:</strong> Verificación de integridad</p></li>
+<li><p><strong>Compatibilidad:</strong> Soporte para diferentes versiones del protocolo</p></li>
+</ul>
+</section>
+<section id="estructuras-de-datos">
+<h2>Estructuras de Datos<a class="headerlink" href="#estructuras-de-datos" title="Enlace permanente a este encabezado"></a></h2>
+<section id="atmosphericsample">
+<h3>AtmosphericSample<a class="headerlink" href="#atmosphericsample" title="Enlace permanente a este encabezado"></a></h3>
+<p>Estructura para almacenar muestras atmosféricas.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">AtmosphericSample</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span><span class="w">        </span><span class="c1">// Temperatura (x10 para precisión)</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">moisture</span><span class="p">;</span><span class="w">   </span><span class="c1">// Humedad (x10 para precisión)</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">hour</span><span class="p">;</span><span class="w">        </span><span class="c1">// Hora de la muestra</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">minute</span><span class="p">;</span><span class="w">      </span><span class="c1">// Minuto de la muestra</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="groundsensor">
+<h3>GroundSensor<a class="headerlink" href="#groundsensor" title="Enlace permanente a este encabezado"></a></h3>
+<p>Estructura para datos de sensores de suelo.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">GroundSensor</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int16_t</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span><span class="w">        </span><span class="c1">// Temperatura del suelo</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">moisture</span><span class="p">;</span><span class="w">   </span><span class="c1">// Humedad del suelo</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w">          </span><span class="c1">// Nitrógeno (mg/kg)</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="w">          </span><span class="c1">// Fósforo (mg/kg)</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">k</span><span class="p">;</span><span class="w">          </span><span class="c1">// Potasio (mg/kg)</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">EC</span><span class="p">;</span><span class="w">         </span><span class="c1">// Conductividad eléctrica</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">PH</span><span class="p">;</span><span class="w">         </span><span class="c1">// pH (x10 para precisión)</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="gpssensor">
+<h3>GpsSensor<a class="headerlink" href="#gpssensor" title="Enlace permanente a este encabezado"></a></h3>
+<p>Estructura para datos GPS.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">GpsSensor</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">latitude</span><span class="p">;</span><span class="w">       </span><span class="c1">// Latitud</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">longitude</span><span class="p">;</span><span class="w">      </span><span class="c1">// Longitud</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">altitude</span><span class="p">;</span><span class="w">       </span><span class="c1">// Altitud</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">hour</span><span class="p">;</span><span class="w">         </span><span class="c1">// Hora UTC</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">minute</span><span class="p">;</span><span class="w">       </span><span class="c1">// Minuto UTC</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">flags</span><span class="p">;</span><span class="w">        </span><span class="c1">// Flags de validación</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="energydata">
+<h3>EnergyData<a class="headerlink" href="#energydata" title="Enlace permanente a este encabezado"></a></h3>
+<p>Estructura para datos energéticos.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">EnergyData</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">volt</span><span class="p">;</span><span class="w">           </span><span class="c1">// Voltaje del sistema</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">amp</span><span class="p">;</span><span class="w">            </span><span class="c1">// Corriente del sistema</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="constantes-del-sistema">
+<h2>Constantes del Sistema<a class="headerlink" href="#constantes-del-sistema" title="Enlace permanente a este encabezado"></a></h2>
+<section id="valores-de-error">
+<h3>Valores de Error<a class="headerlink" href="#valores-de-error" title="Enlace permanente a este encabezado"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define SENSOR_ERROR_TEMP -999</span>
+<span class="cp">#define SENSOR_ERROR_MOISTURE 999</span>
+<span class="cp">#define SENSOR_ERROR_TIME_COMPONENT 99</span>
+<span class="cp">#define SENSOR_ERROR_LATITUDE -999.0</span>
+<span class="cp">#define SENSOR_ERROR_LONGITUDE -999.0</span>
+<span class="cp">#define SENSOR_ERROR_ALTITUDE -999.0</span>
+</pre></div>
+</div>
+</section>
+<section id="configuracion-de-sensores">
+<h3>Configuración de Sensores<a class="headerlink" href="#configuracion-de-sensores" title="Enlace permanente a este encabezado"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define NUMERO_MUESTRAS_ATMOSFERICAS 10</span>
+<span class="cp">#define SAMPLEINTERVAL 2000  </span><span class="c1">// 2 segundos</span>
+</pre></div>
+</div>
+</section>
+<section id="flags-de-validacion-gps">
+<h3>Flags de Validación GPS<a class="headerlink" href="#flags-de-validacion-gps" title="Enlace permanente a este encabezado"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define GPS_LOCATION_VALID 0x01</span>
+<span class="cp">#define GPS_ALTITUDE_VALID 0x02</span>
+<span class="cp">#define GPS_TIME_VALID 0x04</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="ejemplo-de-uso">
+<h2>Ejemplo de Uso<a class="headerlink" href="#ejemplo-de-uso" title="Enlace permanente a este encabezado"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;protocol.h&quot;</span>
+
+<span class="c1">// Crear muestra atmosférica</span>
+<span class="n">Protocol</span><span class="o">::</span><span class="n">AtmosphericSample</span><span class="w"> </span><span class="n">sample</span><span class="p">;</span>
+<span class="n">sample</span><span class="p">.</span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">250</span><span class="p">;</span><span class="w">        </span><span class="c1">// 25.0°C</span>
+<span class="n">sample</span><span class="p">.</span><span class="n">moisture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">650</span><span class="p">;</span><span class="w">    </span><span class="c1">// 65.0%</span>
+<span class="n">sample</span><span class="p">.</span><span class="n">hour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">14</span><span class="p">;</span>
+<span class="n">sample</span><span class="p">.</span><span class="n">minute</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+
+<span class="c1">// Crear datos de suelo</span>
+<span class="n">Protocol</span><span class="o">::</span><span class="n">GroundSensor</span><span class="w"> </span><span class="n">ground</span><span class="p">;</span>
+<span class="n">ground</span><span class="p">.</span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-201</span><span class="p">;</span><span class="w">       </span><span class="c1">// -20.1°C</span>
+<span class="n">ground</span><span class="p">.</span><span class="n">moisture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">750</span><span class="p">;</span><span class="w">    </span><span class="c1">// 75.0%</span>
+<span class="n">ground</span><span class="p">.</span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w">          </span><span class="c1">// 1000 mg/kg</span>
+<span class="n">ground</span><span class="p">.</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">150</span><span class="p">;</span><span class="w">           </span><span class="c1">// 150 mg/kg</span>
+<span class="n">ground</span><span class="p">.</span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">133</span><span class="p">;</span><span class="w">           </span><span class="c1">// 133 mg/kg</span>
+<span class="n">ground</span><span class="p">.</span><span class="n">EC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2556</span><span class="p">;</span><span class="w">         </span><span class="c1">// 2556 μS/cm</span>
+<span class="n">ground</span><span class="p">.</span><span class="n">PH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">68</span><span class="p">;</span><span class="w">           </span><span class="c1">// 6.8 pH</span>
+
+<span class="c1">// Crear datos GPS</span>
+<span class="n">Protocol</span><span class="o">::</span><span class="n">GpsSensor</span><span class="w"> </span><span class="n">gps</span><span class="p">;</span>
+<span class="n">gps</span><span class="p">.</span><span class="n">latitude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-34.6037</span><span class="p">;</span>
+<span class="n">gps</span><span class="p">.</span><span class="n">longitude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-58.3816</span><span class="p">;</span>
+<span class="n">gps</span><span class="p">.</span><span class="n">altitude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">25.0</span><span class="p">;</span>
+<span class="n">gps</span><span class="p">.</span><span class="n">hour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">14</span><span class="p">;</span>
+<span class="n">gps</span><span class="p">.</span><span class="n">minute</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+<span class="n">gps</span><span class="p">.</span><span class="n">flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GPS_LOCATION_VALID</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">GPS_TIME_VALID</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="validacion-de-datos">
+<h2>Validación de Datos<a class="headerlink" href="#validacion-de-datos" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Validación de Temperatura:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><dl class="simple">
+<dt>bool isValidTemperature(int16_t temp) {</dt><dd><dl class="simple">
+<dt>return temp != SENSOR_ERROR_TEMP &amp;&amp;</dt><dd><p>temp &gt;= -400 &amp;&amp; temp &lt;= 800;  // -40°C a 80°C</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p><strong>Validación de Humedad:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><dl class="simple">
+<dt>bool isValidMoisture(uint16_t moisture) {</dt><dd><dl class="simple">
+<dt>return moisture != SENSOR_ERROR_MOISTURE &amp;&amp;</dt><dd><p>moisture &lt;= 1000;  // 0% a 100%</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p><strong>Validación de GPS:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><dl class="simple">
+<dt>bool isValidGpsLocation(const GpsSensor&amp; gps) {</dt><dd><dl class="simple">
+<dt>return (gps.flags &amp; GPS_LOCATION_VALID) &amp;&amp;</dt><dd><p>gps.latitude != SENSOR_ERROR_LATITUDE &amp;&amp;
+gps.longitude != SENSOR_ERROR_LONGITUDE;</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+</section>
+<section id="serializacion-de-datos">
+<h2>Serialización de Datos<a class="headerlink" href="#serializacion-de-datos" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Conversión a Bytes:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><dl>
+<dt>void serializeAtmosphericSample(const AtmosphericSample&amp; sample,</dt><dd><blockquote>
+<div><p>uint8_t* buffer) {</p>
+</div></blockquote>
+<p>buffer[0] = (sample.temp &gt;&gt; 8) &amp; 0xFF;
+buffer[1] = sample.temp &amp; 0xFF;
+buffer[2] = (sample.moisture &gt;&gt; 8) &amp; 0xFF;
+buffer[3] = sample.moisture &amp; 0xFF;
+buffer[4] = sample.hour;
+buffer[5] = sample.minute;</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p><strong>Conversión desde Bytes:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><dl>
+<dt>void deserializeAtmosphericSample(const uint8_t* buffer,</dt><dd><blockquote>
+<div><p>AtmosphericSample&amp; sample) {</p>
+</div></blockquote>
+<p>sample.temp = (buffer[0] &lt;&lt; 8) | buffer[1];
+sample.moisture = (buffer[2] &lt;&lt; 8) | buffer[3];
+sample.hour = buffer[4];
+sample.minute = buffer[5];</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+</section>
+<section id="optimizaciones-de-memoria">
+<h2>Optimizaciones de Memoria<a class="headerlink" href="#optimizaciones-de-memoria" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Tamaños Optimizados:</strong>
+* <strong>Temperatura:</strong> int16_t (-32768 a 32767, precisión 0.1°C)
+* <strong>Humedad:</strong> uint16_t (0 a 65535, precisión 0.1%)
+* <strong>Coordenadas:</strong> float (precisión de 7 decimales)
+* <strong>Flags:</strong> uint8_t (8 bits para múltiples flags)</p>
+<p><strong>Alineación de Datos:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>#pragma pack(push, 1)  // Alineación de 1 byte
+struct OptimizedPacket {</p>
+<blockquote>
+<div><p>uint8_t header;
+uint8_t nodeId;
+AtmosphericSample atmos;
+GroundSensor ground;
+GpsSensor gps;
+EnergyData energy;</p>
+</div></blockquote>
+<p>};
+#pragma pack(pop)</p>
+</div></blockquote>
+</section>
+<section id="compatibilidad-de-versiones">
+<h2>Compatibilidad de Versiones<a class="headerlink" href="#compatibilidad-de-versiones" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Versión del Protocolo:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>#define PROTOCOL_VERSION 1
+#define PROTOCOL_SUBVERSION 0</p>
+</div></blockquote>
+<p><strong>Estructura de Header:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><dl class="simple">
+<dt>struct ProtocolHeader {</dt><dd><p>uint8_t version;
+uint8_t subversion;
+uint8_t packetType;
+uint8_t nodeId;
+uint32_t timestamp;</p>
+</dd>
+</dl>
+<p>};</p>
+</div></blockquote>
+</section>
+<section id="casos-de-uso">
+<h2>Casos de Uso<a class="headerlink" href="#casos-de-uso" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Transmisión de Datos:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>// Preparar paquete de datos
+Protocol::AtmosphericSample samples[10];
+// … llenar datos …</p>
+<p>// Serializar para transmisión
+uint8_t buffer[256];
+serializeData(samples, buffer, sizeof(samples));</p>
+</div></blockquote>
+<p><strong>Validación de Datos Recibidos:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>// Deserializar datos recibidos
+Protocol::GroundSensor groundData;
+deserializeGroundData(receivedBuffer, groundData);</p>
+<p>// Validar datos
+if (isValidGroundData(groundData)) {</p>
+<blockquote>
+<div><p>processGroundData(groundData);</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p><strong>Debug de Datos:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><dl class="simple">
+<dt>void printAtmosphericSample(const AtmosphericSample&amp; sample) {</dt><dd><p>Serial.print(«Temp: «); Serial.print(sample.temp / 10.0);
+Serial.print(»°C, Hum: «); Serial.print(sample.moisture / 10.0);
+Serial.print(«%, Time: «); Serial.print(sample.hour);
+Serial.print(«:»); Serial.println(sample.minute);</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+</section>
+<section id="notas-de-implementacion">
+<h2>Notas de Implementación<a class="headerlink" href="#notas-de-implementacion" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Endianness:</strong> Los datos se transmiten en little-endian</p></li>
+<li><p><strong>Checksum:</strong> Validación de integridad en transmisiones</p></li>
+<li><p><strong>Compresión:</strong> Datos comprimidos para ahorrar ancho de banda</p></li>
+<li><p><strong>Versionado:</strong> Soporte para múltiples versiones del protocolo</p></li>
+</ul>
+</section>
+<section id="ver-tambien">
+<h2>Ver también<a class="headerlink" href="#ver-tambien" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="sensor_manager.html"><span class="doc">SensorManager</span></a></p></li>
+<li><p><a class="reference internal" href="radio_manager.html"><span class="doc">RadioManager</span></a></p></li>
+<li><p><span class="xref std std-doc">../user_guide/data_format</span></p></li>
+<li><p><span class="xref std std-doc">../developer_guide/protocol_design</span></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="../overview/index.html" class="btn btn-neutral float-left" title="Visión General del Sistema" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../ejemplos_uso.html" class="btn btn-neutral float-right" title="Ejemplos de Uso" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Equipo de Desarrollo.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

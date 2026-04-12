@@ -63,27 +63,27 @@ echo ""
 
 # Construir documentación principal (red_mesh)
 if build_docs "docs" "docs/_build/html" "Sistema Red Mesh Principal"; then
-    ((success_count++))
+    success_count=$((success_count + 1))
 else
-    ((fail_count++))
+    fail_count=$((fail_count + 1))
 fi
 
 echo ""
 
 # Construir documentación del gateway
 if build_docs "main_gateway/docs" "main_gateway/docs/_build/html" "Gateway Agrícola"; then
-    ((success_count++))
+    success_count=$((success_count + 1))
 else
-    ((fail_count++))
+    fail_count=$((fail_count + 1))
 fi
 
 echo ""
 
 # Construir documentación de nodos
 if build_docs "main_nodo/docs" "main_nodo/docs/_build/html" "Sistema de Nodos"; then
-    ((success_count++))
+    success_count=$((success_count + 1))
 else
-    ((fail_count++))
+    fail_count=$((fail_count + 1))
 fi
 
 echo ""

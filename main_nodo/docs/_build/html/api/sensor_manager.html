@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SensorManager &mdash; documentación de Sistema de Monitoreo Agrícola - 1.0.0</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=14be7d3c"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Sistema de Monitoreo Agrícola
+          </a>
+              <div class="version">
+                1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Índice de Documentación</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Visión General del Sistema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html#id1">Errores Comunes y Decisiones de Diseño</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocol.html">Protocolo de Comunicación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocol.html#id1">Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ejemplos_uso.html">Ejemplos de Uso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metricas.html">Métricas de Rendimiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recursos.html">Recursos y Enlaces Externos</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sistema de Monitoreo Agrícola</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">SensorManager</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/sensor_manager.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sensormanager">
+<h1>SensorManager<a class="headerlink" href="#sensormanager" title="Enlace permanente a este encabezado"></a></h1>
+<section id="descripcion">
+<h2>Descripción<a class="headerlink" href="#descripcion" title="Enlace permanente a este encabezado"></a></h2>
+<p>El <strong>SensorManager</strong> es la clase central responsable de la gestión de todos los sensores
+del sistema de monitoreo agrícola. Proporciona una interfaz unificada para la adquisición,
+procesamiento y almacenamiento de datos sensoriales.</p>
+</section>
+<section id="caracteristicas-principales">
+<h2>Características Principales<a class="headerlink" href="#caracteristicas-principales" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Gestión Centralizada:</strong> Control unificado de todos los sensores</p></li>
+<li><p><strong>Buffer Circular:</strong> Almacenamiento eficiente de muestras atmosféricas</p></li>
+<li><p><strong>Integración GPS:</strong> Asociación automática de coordenadas y tiempo</p></li>
+<li><p><strong>VoltageReader Integrado:</strong> Lectura precisa de voltaje del sistema</p></li>
+<li><p><strong>Validación de Datos:</strong> Verificación de rangos y detección de errores</p></li>
+</ul>
+</section>
+<section id="componentes-integrados">
+<h2>Componentes Integrados<a class="headerlink" href="#componentes-integrados" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>DHT Sensor:</strong> Temperatura y humedad ambiental</p></li>
+<li><p><strong>GPS Module:</strong> Geolocalización y sincronización temporal</p></li>
+<li><p><strong>VoltageReader:</strong> Monitoreo de energía del sistema</p></li>
+<li><p><strong>Sensores de Suelo:</strong> NPK, pH, EC, temperatura y humedad</p></li>
+</ul>
+</section>
+<section id="ejemplo-de-uso">
+<h2>Ejemplo de Uso<a class="headerlink" href="#ejemplo-de-uso" title="Enlace permanente a este encabezado"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;sensor_manager.h&quot;</span>
+
+<span class="n">SensorManager</span><span class="w"> </span><span class="n">sensorManager</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">sensorManager</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Actualizar sensores atmosféricos</span>
+<span class="w">    </span><span class="n">sensorManager</span><span class="p">.</span><span class="n">update</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Leer todos los sensores</span>
+<span class="w">    </span><span class="n">sensorManager</span><span class="p">.</span><span class="n">readGroundGpsSensors</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Obtener información de debug</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">debugInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sensorManager</span><span class="p">.</span><span class="n">getVoltageReaderDebugInfo</span><span class="p">();</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">debugInfo</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="metodos-principales">
+<h2>Métodos Principales<a class="headerlink" href="#metodos-principales" title="Enlace permanente a este encabezado"></a></h2>
+<section id="begin">
+<h3>begin()<a class="headerlink" href="#begin" title="Enlace permanente a este encabezado"></a></h3>
+<p>Inicializa todos los sensores y la comunicación.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">begin</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="update">
+<h3>update()<a class="headerlink" href="#update" title="Enlace permanente a este encabezado"></a></h3>
+<p>Actualiza las lecturas de sensores atmosféricos según el intervalo configurado.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="readgroundgpssensors">
+<h3>readGroundGpsSensors()<a class="headerlink" href="#readgroundgpssensors" title="Enlace permanente a este encabezado"></a></h3>
+<p>Lee y almacena datos de sensores de suelo, energía y GPS.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">readGroundGpsSensors</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="readsensorsatmospheric">
+<h3>readSensorsAtmospheric()<a class="headerlink" href="#readsensorsatmospheric" title="Enlace permanente a este encabezado"></a></h3>
+<p>Prepara el buffer de muestras atmosféricas para transmisión.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">readSensorsAtmospheric</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="getvoltagereaderdebuginfo">
+<h3>getVoltageReaderDebugInfo()<a class="headerlink" href="#getvoltagereaderdebuginfo" title="Enlace permanente a este encabezado"></a></h3>
+<p>Obtiene información detallada del estado del VoltageReader.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="nf">getVoltageReaderDebugInfo</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="calibratevoltagereader">
+<h3>calibrateVoltageReader()<a class="headerlink" href="#calibratevoltagereader" title="Enlace permanente a este encabezado"></a></h3>
+<p>Realiza calibración del VoltageReader.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">calibrateVoltageReader</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">expectedMin</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">expectedMax</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="estructuras-de-datos">
+<h2>Estructuras de Datos<a class="headerlink" href="#estructuras-de-datos" title="Enlace permanente a este encabezado"></a></h2>
+<section id="atmossamples">
+<h3>atmosSamples[]<a class="headerlink" href="#atmossamples" title="Enlace permanente a este encabezado"></a></h3>
+<p>Buffer circular de muestras atmosféricas.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Protocol</span><span class="o">::</span><span class="n">AtmosphericSample</span><span class="w"> </span><span class="n">atmosSamples</span><span class="p">[</span><span class="n">NUMERO_MUESTRAS_ATMOSFERICAS</span><span class="p">];</span>
+</pre></div>
+</div>
+</section>
+<section id="grounddata">
+<h3>groundData<a class="headerlink" href="#grounddata" title="Enlace permanente a este encabezado"></a></h3>
+<p>Última muestra de sensores de suelo.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Protocol</span><span class="o">::</span><span class="n">GroundSensor</span><span class="w"> </span><span class="n">groundData</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="gpsdata">
+<h3>gpsData<a class="headerlink" href="#gpsdata" title="Enlace permanente a este encabezado"></a></h3>
+<p>Última muestra de datos GPS.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Protocol</span><span class="o">::</span><span class="n">GpsSensor</span><span class="w"> </span><span class="n">gpsData</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="energydata">
+<h3>energyData<a class="headerlink" href="#energydata" title="Enlace permanente a este encabezado"></a></h3>
+<p>Última muestra de datos energéticos.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Protocol</span><span class="o">::</span><span class="n">EnergyData</span><span class="w"> </span><span class="n">energyData</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="configuracion">
+<h2>Configuración<a class="headerlink" href="#configuracion" title="Enlace permanente a este encabezado"></a></h2>
+<p>El SensorManager utiliza las siguientes configuraciones desde <cite>config.h</cite>:</p>
+<ul class="simple">
+<li><p><strong>SAMPLEINTERVAL:</strong> Intervalo de muestreo en milisegundos</p></li>
+<li><p><strong>NUMERO_MUESTRAS_ATMOSFERICAS:</strong> Tamaño del buffer circular</p></li>
+<li><p><strong>PIN_SENS_DHTT:</strong> Pin del sensor DHT</p></li>
+<li><p><strong>GPS_RX_UART2:</strong> Pin RX del GPS (UART2 HardwareSerial)</p></li>
+<li><p><strong>GPS_TX_UART2:</strong> Pin TX del GPS (UART2 HardwareSerial)</p></li>
+</ul>
+</section>
+<section id="optimizaciones">
+<h2>Optimizaciones<a class="headerlink" href="#optimizaciones" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Sleep Inteligente:</strong> Reduce consumo entre lecturas</p></li>
+<li><p><strong>Validación de Rangos:</strong> Detecta errores de sensores</p></li>
+<li><p><strong>Buffer Eficiente:</strong> Evita desbordamiento de memoria</p></li>
+<li><p><strong>Transmisión Selectiva:</strong> Solo envía datos críticos</p></li>
+</ul>
+</section>
+<section id="notas-de-implementacion">
+<h2>Notas de Implementación<a class="headerlink" href="#notas-de-implementacion" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p>La clase sigue el principio de <strong>Single Responsibility</strong></p></li>
+<li><p>Utiliza <strong>Dependency Injection</strong> para VoltageReader</p></li>
+<li><p>Implementa <strong>Error Handling</strong> robusto</p></li>
+<li><p>Proporciona <strong>Debug Information</strong> detallada</p></li>
+</ul>
+</section>
+<section id="ver-tambien">
+<h2>Ver también<a class="headerlink" href="#ver-tambien" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="voltage_reader.html"><span class="doc">VoltageReader</span></a></p></li>
+<li><p><a class="reference internal" href="protocol.html"><span class="doc">Protocolo de Comunicación</span></a></p></li>
+<li><p><span class="xref std std-doc">../user_guide/sensors</span></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Equipo de Desarrollo.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

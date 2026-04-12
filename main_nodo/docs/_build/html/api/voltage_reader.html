@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoltageReader &mdash; documentación de Sistema de Monitoreo Agrícola - 1.0.0</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=14be7d3c"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Sistema de Monitoreo Agrícola
+          </a>
+              <div class="version">
+                1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Índice de Documentación</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Visión General del Sistema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html#id1">Errores Comunes y Decisiones de Diseño</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocol.html">Protocolo de Comunicación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocol.html#id1">Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ejemplos_uso.html">Ejemplos de Uso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metricas.html">Métricas de Rendimiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recursos.html">Recursos y Enlaces Externos</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sistema de Monitoreo Agrícola</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">VoltageReader</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/voltage_reader.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="voltagereader">
+<h1>VoltageReader<a class="headerlink" href="#voltagereader" title="Enlace permanente a este encabezado"></a></h1>
+<section id="descripcion">
+<h2>Descripción<a class="headerlink" href="#descripcion" title="Enlace permanente a este encabezado"></a></h2>
+<p>El <strong>VoltageReader</strong> es una clase especializada para la lectura precisa de voltaje
+desde un divisor resistivo conectado al ADC del ESP32. Proporciona funcionalidades
+avanzadas como filtrado de ruido, calibración automática y mapeo de rangos.</p>
+</section>
+<section id="caracteristicas-principales">
+<h2>Características Principales<a class="headerlink" href="#caracteristicas-principales" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Lectura Precisa:</strong> Resolución de 12 bits con atenuación configurable</p></li>
+<li><p><strong>Filtrado de Ruido:</strong> Media móvil para estabilidad de lecturas</p></li>
+<li><p><strong>Calibración Inteligente:</strong> Corrección automática de offset y pendiente</p></li>
+<li><p><strong>Mapeo Flexible:</strong> Conversión a porcentajes o rangos personalizados</p></li>
+<li><p><strong>Validación de Datos:</strong> Verificación de rangos de voltaje esperados</p></li>
+</ul>
+</section>
+<section id="especificaciones-tecnicas">
+<h2>Especificaciones Técnicas<a class="headerlink" href="#especificaciones-tecnicas" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Pin ADC:</strong> 34 (configurable)</p></li>
+<li><p><strong>Rango de Entrada:</strong> 0V a 2.5V (divisor resistivo)</p></li>
+<li><p><strong>Resolución:</strong> 12 bits (4096 niveles)</p></li>
+<li><p><strong>Atenuación:</strong> 11dB (0V-2.6V)</p></li>
+<li><p><strong>Filtrado:</strong> Media móvil configurable</p></li>
+<li><p><strong>Calibración:</strong> Offset y pendiente automáticos</p></li>
+</ul>
+</section>
+<section id="ejemplo-de-uso">
+<h2>Ejemplo de Uso<a class="headerlink" href="#ejemplo-de-uso" title="Enlace permanente a este encabezado"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;voltage_reader.h&quot;</span>
+
+<span class="n">VoltageReader</span><span class="w"> </span><span class="n">voltageReader</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">voltageReader</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Opcional: Calibrar el sensor</span>
+<span class="w">    </span><span class="n">voltageReader</span><span class="p">.</span><span class="n">calibrate</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.5</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Leer voltaje directo</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">voltage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">voltageReader</span><span class="p">.</span><span class="n">readVoltage</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Leer como porcentaje</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">percentage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">voltageReader</span><span class="p">.</span><span class="n">readVoltagePercentage</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Mapear a rango personalizado (0V-15V del sistema)</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">systemVoltage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">voltageReader</span><span class="p">.</span><span class="n">readVoltageMapped</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">15.0</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Verificar si la lectura es válida</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">voltageReader</span><span class="p">.</span><span class="n">isReadingValid</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Voltaje: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">voltage</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;V&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Sistema: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">systemVoltage</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;V&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="metodos-principales">
+<h2>Métodos Principales<a class="headerlink" href="#metodos-principales" title="Enlace permanente a este encabezado"></a></h2>
+<section id="begin">
+<h3>begin()<a class="headerlink" href="#begin" title="Enlace permanente a este encabezado"></a></h3>
+<p>Inicializa el VoltageReader con la configuración del ADC.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">begin</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="readvoltage">
+<h3>readVoltage()<a class="headerlink" href="#readvoltage" title="Enlace permanente a este encabezado"></a></h3>
+<p>Lee el voltaje actual del divisor resistivo.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="w"> </span><span class="nf">readVoltage</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="readvoltagepercentage">
+<h3>readVoltagePercentage()<a class="headerlink" href="#readvoltagepercentage" title="Enlace permanente a este encabezado"></a></h3>
+<p>Lee el voltaje como porcentaje del rango máximo.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="w"> </span><span class="nf">readVoltagePercentage</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="readvoltagemapped">
+<h3>readVoltageMapped()<a class="headerlink" href="#readvoltagemapped" title="Enlace permanente a este encabezado"></a></h3>
+<p>Mapea el voltaje a un rango personalizado.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="w"> </span><span class="nf">readVoltageMapped</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">outMin</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">outMax</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="readrawvalue">
+<h3>readRawValue()<a class="headerlink" href="#readrawvalue" title="Enlace permanente a este encabezado"></a></h3>
+<p>Lee el valor raw del ADC sin procesamiento.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">readRawValue</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="calibrate">
+<h3>calibrate()<a class="headerlink" href="#calibrate" title="Enlace permanente a este encabezado"></a></h3>
+<p>Realiza calibración automática del sensor.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">calibrate</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">expectedMin</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">expectedMax</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="calibratemanual">
+<h3>calibrateManual()<a class="headerlink" href="#calibratemanual" title="Enlace permanente a este encabezado"></a></h3>
+<p>Realiza calibración manual con valores específicos.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">calibrateManual</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">offset</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">slope</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="isreadingvalid">
+<h3>isReadingValid()<a class="headerlink" href="#isreadingvalid" title="Enlace permanente a este encabezado"></a></h3>
+<p>Verifica si la lectura actual está dentro del rango válido.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">isReadingValid</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="getdebuginfo">
+<h3>getDebugInfo()<a class="headerlink" href="#getdebuginfo" title="Enlace permanente a este encabezado"></a></h3>
+<p>Obtiene información detallada del estado del sensor.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="nf">getDebugInfo</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="configuracion">
+<h2>Configuración<a class="headerlink" href="#configuracion" title="Enlace permanente a este encabezado"></a></h2>
+<p>El VoltageReader utiliza las siguientes configuraciones desde <cite>config.h</cite>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define VOLTAGE_READER_PIN 34</span>
+<span class="cp">#define VOLTAGE_READER_RESOLUTION 12</span>
+<span class="cp">#define VOLTAGE_READER_ATTENUATION ADC_ATTEN_DB_11</span>
+<span class="cp">#define VOLTAGE_READER_MIN_VOLTAGE 0.0</span>
+<span class="cp">#define VOLTAGE_READER_MAX_VOLTAGE 2.5</span>
+<span class="cp">#define VOLTAGE_READER_FILTER_SAMPLES 5</span>
+<span class="cp">#define VOLTAGE_READER_CALIBRATION_OFFSET 0.0</span>
+<span class="cp">#define VOLTAGE_READER_CALIBRATION_SLOPE 1.0</span>
+</pre></div>
+</div>
+</section>
+<section id="algoritmo-de-filtrado">
+<h2>Algoritmo de Filtrado<a class="headerlink" href="#algoritmo-de-filtrado" title="Enlace permanente a este encabezado"></a></h2>
+<p>El VoltageReader implementa un filtro de media móvil para reducir el ruido:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Media móvil simple</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">filteredValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">filterSamples</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">filteredValue</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">pin</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">filteredValue</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">filterSamples</span><span class="p">;</span>
+
+<span class="c1">// Conversión a voltaje</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">voltage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">filteredValue</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">4095.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">maxVoltage</span><span class="p">;</span>
+
+<span class="c1">// Aplicar calibración</span>
+<span class="n">voltage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">voltage</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">offset</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">slope</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="sistema-de-calibracion">
+<h2>Sistema de Calibración<a class="headerlink" href="#sistema-de-calibracion" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Calibración Automática:</strong>
+* Mide múltiples puntos en el rango esperado
+* Calcula offset y pendiente automáticamente
+* Aplica corrección en tiempo real</p>
+<p><strong>Calibración Manual:</strong>
+* Permite ajuste fino de parámetros
+* Útil para compensar errores sistemáticos
+* Persiste entre reinicios</p>
+</section>
+<section id="validacion-de-datos">
+<h2>Validación de Datos<a class="headerlink" href="#validacion-de-datos" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Rango de Voltaje:</strong> Verifica que esté entre 0V y 2.5V</p></li>
+<li><p><strong>Estabilidad:</strong> Detecta lecturas anómalas</p></li>
+<li><p><strong>Consistencia:</strong> Valida tendencias de cambio</p></li>
+<li><p><strong>Timeout:</strong> Detecta sensores desconectados</p></li>
+</ul>
+</section>
+<section id="optimizaciones">
+<h2>Optimizaciones<a class="headerlink" href="#optimizaciones" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Lectura Eficiente:</strong> Minimiza tiempo de ADC</p></li>
+<li><p><strong>Memoria Optimizada:</strong> Buffer circular pequeño</p></li>
+<li><p><strong>Energía:</strong> Sleep entre lecturas</p></li>
+<li><p><strong>Precisión:</strong> Calibración automática</p></li>
+</ul>
+</section>
+<section id="casos-de-uso">
+<h2>Casos de Uso<a class="headerlink" href="#casos-de-uso" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Monitoreo de Batería:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>float batteryVoltage = voltageReader.readVoltageMapped(0.0, 15.0);
+if (batteryVoltage &lt; 11.0) {</p>
+<blockquote>
+<div><p>// Alerta: Batería baja</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p><strong>Control de Potencia:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>float powerLevel = voltageReader.readVoltagePercentage();
+if (powerLevel &gt; 80.0) {</p>
+<blockquote>
+<div><p>// Reducir consumo</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p><strong>Calibración Periódica:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>// Calibrar cada 24 horas
+if (millis() - lastCalibration &gt; 86400000) {</p>
+<blockquote>
+<div><p>voltageReader.calibrate(0.0, 2.5);
+lastCalibration = millis();</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+</section>
+<section id="notas-de-implementacion">
+<h2>Notas de Implementación<a class="headerlink" href="#notas-de-implementacion" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Thread-Safe:</strong> Seguro para uso en múltiples contextos</p></li>
+<li><p><strong>Error Handling:</strong> Manejo robusto de fallos</p></li>
+<li><p><strong>Debug Information:</strong> Logging detallado para troubleshooting</p></li>
+<li><p><strong>Configuración Flexible:</strong> Parámetros ajustables</p></li>
+</ul>
+</section>
+<section id="ver-tambien">
+<h2>Ver también<a class="headerlink" href="#ver-tambien" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="sensor_manager.html"><span class="doc">SensorManager</span></a></p></li>
+<li><p><span class="xref std std-doc">../user_guide/sensors</span></p></li>
+<li><p><span class="xref std std-doc">../developer_guide/voltage_measurement</span></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Equipo de Desarrollo.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

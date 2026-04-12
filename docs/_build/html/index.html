@@ -1,32 +1,26 @@
-
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="es" data-content_root="./">
+<html class="writer-html5" lang="es" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sistema Red Mesh Agrícola &mdash; documentación de Sistema Red Mesh Agrícola - 1.0.0</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=7d55ca93" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=7d55ca93" />
-
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-      <script src="_static/jquery.js?v=5d32c60e"></script>
-      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=36c4ab74"></script>
-      <script src="_static/doctools.js?v=9bcbadda"></script>
-      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="_static/translations.js?v=f85f4cfb"></script>
-      <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
-      <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
-      <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
-      <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
-      <script type="module">
-import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
-window.addEventListener("load", () => mermaid.run());
-</script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=14be7d3c"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/translations.js?v=efdbd0b9"></script>
+        <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
@@ -44,6 +38,9 @@ window.addEventListener("load", () => mermaid.run());
           <a href="#" class="icon icon-home">
             Sistema Red Mesh Agrícola
           </a>
+              <div class="version">
+                1.0.0
+              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
@@ -121,10 +118,10 @@ window.addEventListener("load", () => mermaid.run());
            <div itemprop="articleBody">
              
   <section id="sistema-red-mesh-agricola">
-<h1>Sistema Red Mesh Agrícola<a class="headerlink" href="#sistema-red-mesh-agricola" title="Link to this heading"></a></h1>
+<h1>Sistema Red Mesh Agrícola<a class="headerlink" href="#sistema-red-mesh-agricola" title="Enlace permanente a este encabezado"></a></h1>
 <p>Documentación técnica unificada del sistema de red mesh para monitoreo y control agrícola.</p>
-<pre  class="mermaid">
-        graph TB
+<div class="mermaid">
+            graph TB
     subgraph &quot;Sistema Red Mesh Agrícola&quot;
         A[Nodos Sensores] --&gt; B[Gateway Central]
         B --&gt; C[Procesamiento Local]
@@ -144,7 +141,7 @@ window.addEventListener("load", () => mermaid.run());
         A --&gt; I
         A --&gt; J
     end
-    </pre><div class="toctree-wrapper compound">
+        </div><div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Índice de Documentación</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="descripcion_general.html">Descripción General</a></li>
@@ -190,7 +187,7 @@ window.addEventListener("load", () => mermaid.run());
 </ul>
 </div>
 <section id="otras-documentaciones">
-<h2>Otras Documentaciones<a class="headerlink" href="#otras-documentaciones" title="Link to this heading"></a></h2>
+<h2>Otras Documentaciones<a class="headerlink" href="#otras-documentaciones" title="Enlace permanente a este encabezado"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://localhost:8000/main_gateway/docs/_build/html/index.html">Documentación Gateway</a></p></li>
 <li><p><a class="reference external" href="http://localhost:8000/main_nodo/docs/_build/html/index.html">Documentación Nodos</a></p></li>
@@ -202,7 +199,7 @@ window.addEventListener("load", () => mermaid.run());
 </section>
 </section>
 <section id="indices-y-tablas">
-<h1>Indices y tablas<a class="headerlink" href="#indices-y-tablas" title="Link to this heading"></a></h1>
+<h1>Indices y tablas<a class="headerlink" href="#indices-y-tablas" title="Enlace permanente a este encabezado"></a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Índice</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Índice de Módulos</span></a></p></li>

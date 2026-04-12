@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RadioManager &mdash; documentación de Sistema de Monitoreo Agrícola - 1.0.0</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=14be7d3c"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Sistema de Monitoreo Agrícola
+          </a>
+              <div class="version">
+                1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Índice de Documentación</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Visión General del Sistema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html#id1">Errores Comunes y Decisiones de Diseño</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocol.html">Protocolo de Comunicación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocol.html#id1">Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ejemplos_uso.html">Ejemplos de Uso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metricas.html">Métricas de Rendimiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recursos.html">Recursos y Enlaces Externos</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sistema de Monitoreo Agrícola</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">RadioManager</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/radio_manager.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="radiomanager">
+<h1>RadioManager<a class="headerlink" href="#radiomanager" title="Enlace permanente a este encabezado"></a></h1>
+<section id="descripcion">
+<h2>Descripción<a class="headerlink" href="#descripcion" title="Enlace permanente a este encabezado"></a></h2>
+<p>El <strong>RadioManager</strong> es responsable de la gestión de la comunicación LoRa mesh
+en el sistema de monitoreo agrícola. Proporciona funcionalidades avanzadas
+para transmisión, recepción y enrutamiento de datos en la red mesh.</p>
+</section>
+<section id="caracteristicas-principales">
+<h2>Características Principales<a class="headerlink" href="#caracteristicas-principales" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Comunicación LoRa:</strong> Transmisión de largo alcance (hasta 10km)</p></li>
+<li><p><strong>Red Mesh:</strong> Enrutamiento dinámico y redundante</p></li>
+<li><p><strong>Protocolo Personalizado:</strong> Optimizado para datos agrícolas</p></li>
+<li><p><strong>Gestión de Congestión:</strong> Control de tráfico de red</p></li>
+<li><p><strong>Retransmisión Automática:</strong> Garantía de entrega de datos</p></li>
+</ul>
+</section>
+<section id="especificaciones-tecnicas">
+<h2>Especificaciones Técnicas<a class="headerlink" href="#especificaciones-tecnicas" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Frecuencia:</strong> 433 MHz (configurable)</p></li>
+<li><p><strong>Potencia:</strong> Hasta 20 dBm</p></li>
+<li><p><strong>Modulación:</strong> LoRa (SF7-SF12)</p></li>
+<li><p><strong>Ancho de Banda:</strong> 125 kHz</p></li>
+<li><p><strong>Tasa de Datos:</strong> 0.3-37.5 kbps</p></li>
+<li><p><strong>Alcance:</strong> 10km en condiciones óptimas</p></li>
+</ul>
+</section>
+<section id="ejemplo-de-uso">
+<h2>Ejemplo de Uso<a class="headerlink" href="#ejemplo-de-uso" title="Enlace permanente a este encabezado"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;radio_manager.h&quot;</span>
+
+<span class="n">RadioManager</span><span class="w"> </span><span class="n">radioManager</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">radioManager</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+<span class="w">    </span><span class="n">radioManager</span><span class="p">.</span><span class="n">setNodeId</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Enviar datos</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">radioManager</span><span class="p">.</span><span class="n">sendData</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Datos enviados exitosamente&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Procesar datos recibidos</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">radioManager</span><span class="p">.</span><span class="n">dataAvailable</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">receivedData</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span>
+<span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">radioManager</span><span class="p">.</span><span class="n">receiveData</span><span class="p">(</span><span class="n">receivedData</span><span class="p">);</span>
+<span class="w">        </span><span class="n">processReceivedData</span><span class="p">(</span><span class="n">receivedData</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="metodos-principales">
+<h2>Métodos Principales<a class="headerlink" href="#metodos-principales" title="Enlace permanente a este encabezado"></a></h2>
+<section id="begin">
+<h3>begin()<a class="headerlink" href="#begin" title="Enlace permanente a este encabezado"></a></h3>
+<p>Inicializa el módulo LoRa y configura los parámetros de comunicación.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">begin</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="setnodeid">
+<h3>setNodeId()<a class="headerlink" href="#setnodeid" title="Enlace permanente a este encabezado"></a></h3>
+<p>Configura el ID único del nodo en la red mesh.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setNodeId</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">nodeId</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="senddata">
+<h3>sendData()<a class="headerlink" href="#senddata" title="Enlace permanente a este encabezado"></a></h3>
+<p>Envía datos a través de la red LoRa mesh.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">sendData</span><span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="receivedata">
+<h3>receiveData()<a class="headerlink" href="#receivedata" title="Enlace permanente a este encabezado"></a></h3>
+<p>Recibe datos de la red LoRa mesh.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">receiveData</span><span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">buffer</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="dataavailable">
+<h3>dataAvailable()<a class="headerlink" href="#dataavailable" title="Enlace permanente a este encabezado"></a></h3>
+<p>Verifica si hay datos disponibles para recibir.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">dataAvailable</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="getnetworkstatus">
+<h3>getNetworkStatus()<a class="headerlink" href="#getnetworkstatus" title="Enlace permanente a este encabezado"></a></h3>
+<p>Obtiene el estado actual de la red mesh.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NetworkStatus</span><span class="w"> </span><span class="nf">getNetworkStatus</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="configuracion-de-red">
+<h2>Configuración de Red<a class="headerlink" href="#configuracion-de-red" title="Enlace permanente a este encabezado"></a></h2>
+<p>El RadioManager utiliza las siguientes configuraciones desde <cite>config.h</cite>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define LORA_FREQUENCY 433E6</span>
+<span class="cp">#define LORA_POWER 20</span>
+<span class="cp">#define LORA_SPREADING_FACTOR 7</span>
+<span class="cp">#define LORA_SIGNAL_BANDWIDTH 125E3</span>
+<span class="cp">#define LORA_CODING_RATE 5</span>
+<span class="cp">#define LORA_PREAMBLE_LENGTH 8</span>
+<span class="cp">#define LORA_SYNC_WORD 0x12</span>
+</pre></div>
+</div>
+</section>
+<section id="protocolo-de-comunicacion">
+<h2>Protocolo de Comunicación<a class="headerlink" href="#protocolo-de-comunicacion" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Estructura de Paquete:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><dl class="simple">
+<dt>struct LoRaPacket {</dt><dd><p>uint8_t header;        // 0xAA
+uint8_t nodeId;        // ID del nodo
+uint8_t packetType;    // Tipo de datos
+uint8_t sequence;      // Número de secuencia
+uint8_t data[240];     // Datos del paquete
+uint8_t checksum;      // Checksum para validación</p>
+</dd>
+</dl>
+<p>};</p>
+</div></blockquote>
+<p><strong>Tipos de Paquetes:</strong>
+* <strong>0x01:</strong> Datos atmosféricos
+* <strong>0x02:</strong> Datos de suelo
+* <strong>0x03:</strong> Datos GPS
+* <strong>0x04:</strong> Datos de energía
+* <strong>0x05:</strong> Comando de control
+* <strong>0x06:</strong> Respuesta de estado</p>
+</section>
+<section id="enrutamiento-mesh">
+<h2>Enrutamiento Mesh<a class="headerlink" href="#enrutamiento-mesh" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Algoritmo de Enrutamiento:</strong>
+* <strong>Flooding Controlado:</strong> Transmisión con TTL
+* <strong>Rutas Múltiples:</strong> Redundancia de comunicación
+* <strong>Detección de Vecinos:</strong> Descubrimiento automático
+* <strong>Optimización de Rutas:</strong> Selección de mejor camino</p>
+<p><strong>TTL (Time To Live):</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>#define MESH_TTL_DEFAULT 5
+#define MESH_TTL_MAX 10
+#define MESH_TTL_CRITICAL 15</p>
+</div></blockquote>
+</section>
+<section id="gestion-de-congestion">
+<h2>Gestión de Congestión<a class="headerlink" href="#gestion-de-congestion" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Control de Flujo:</strong> Limita transmisiones por nodo</p></li>
+<li><p><strong>Priorización:</strong> Datos críticos tienen prioridad</p></li>
+<li><p><strong>Backoff Exponencial:</strong> Reduce colisiones</p></li>
+<li><p><strong>Monitoreo de Calidad:</strong> RSSI y SNR</p></li>
+</ul>
+</section>
+<section id="optimizaciones">
+<h2>Optimizaciones<a class="headerlink" href="#optimizaciones" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Sleep Inteligente:</strong> Reduce consumo entre transmisiones</p></li>
+<li><p><strong>Compresión de Datos:</strong> Minimiza tamaño de paquetes</p></li>
+<li><p><strong>Ack Selectivo:</strong> Solo confirma paquetes críticos</p></li>
+<li><p><strong>Cache de Rutas:</strong> Evita recálculo frecuente</p></li>
+</ul>
+</section>
+<section id="casos-de-uso">
+<h2>Casos de Uso<a class="headerlink" href="#casos-de-uso" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Transmisión de Datos Sensoriales:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>// Enviar datos atmosféricos
+uint8_t data[] = {temp, humidity, pressure};
+radioManager.sendData(data, sizeof(data));</p>
+</div></blockquote>
+<p><strong>Comunicación de Control:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>// Enviar comando de calibración
+uint8_t command[] = {0x05, 0x01, 0x00};
+radioManager.sendData(command, sizeof(command));</p>
+</div></blockquote>
+<p><strong>Monitoreo de Red:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>NetworkStatus status = radioManager.getNetworkStatus();
+if (status.connectedNodes &lt; 3) {</p>
+<blockquote>
+<div><p>// Alerta: Red poco conectada</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+</section>
+<section id="notas-de-implementacion">
+<h2>Notas de Implementación<a class="headerlink" href="#notas-de-implementacion" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Thread-Safe:</strong> Seguro para uso concurrente</p></li>
+<li><p><strong>Error Recovery:</strong> Recuperación automática de fallos</p></li>
+<li><p><strong>Debug Logging:</strong> Información detallada de comunicación</p></li>
+<li><p><strong>Configuración Dinámica:</strong> Parámetros ajustables en tiempo real</p></li>
+</ul>
+</section>
+<section id="ver-tambien">
+<h2>Ver también<a class="headerlink" href="#ver-tambien" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="sensor_manager.html"><span class="doc">SensorManager</span></a></p></li>
+<li><p><a class="reference internal" href="protocol.html"><span class="doc">Protocolo de Comunicación</span></a></p></li>
+<li><p><span class="xref std std-doc">../user_guide/communication</span></p></li>
+<li><p><span class="xref std std-doc">../developer_guide/mesh_networking</span></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Equipo de Desarrollo.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NodeIdentity &mdash; documentación de Sistema de Monitoreo Agrícola - 1.0.0</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=14be7d3c"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Sistema de Monitoreo Agrícola
+          </a>
+              <div class="version">
+                1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Índice de Documentación</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Visión General del Sistema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html#id1">Errores Comunes y Decisiones de Diseño</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocol.html">Protocolo de Comunicación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocol.html#id1">Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ejemplos_uso.html">Ejemplos de Uso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metricas.html">Métricas de Rendimiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recursos.html">Recursos y Enlaces Externos</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sistema de Monitoreo Agrícola</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">NodeIdentity</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/node_identity.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nodeidentity">
+<h1>NodeIdentity<a class="headerlink" href="#nodeidentity" title="Enlace permanente a este encabezado"></a></h1>
+<section id="descripcion">
+<h2>Descripción<a class="headerlink" href="#descripcion" title="Enlace permanente a este encabezado"></a></h2>
+<p>El <strong>NodeIdentity</strong> es responsable de la gestión de la identidad única del nodo
+en la red mesh agrícola. Proporciona funcionalidades para configuración,
+identificación y gestión de parámetros específicos de cada nodo.</p>
+</section>
+<section id="caracteristicas-principales">
+<h2>Características Principales<a class="headerlink" href="#caracteristicas-principales" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Identidad Única:</strong> Gestión del ID único del nodo</p></li>
+<li><p><strong>Configuración Persistente:</strong> Almacenamiento en EEPROM/SPIFFS</p></li>
+<li><p><strong>Parámetros de Red:</strong> Configuración de comunicación mesh</p></li>
+<li><p><strong>Información de Ubicación:</strong> Datos GPS y descripción del sitio</p></li>
+<li><p><strong>Gestión de Versiones:</strong> Control de versiones de firmware</p></li>
+</ul>
+</section>
+<section id="especificaciones-tecnicas">
+<h2>Especificaciones Técnicas<a class="headerlink" href="#especificaciones-tecnicas" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Almacenamiento:</strong> EEPROM/SPIFFS para persistencia</p></li>
+<li><p><strong>ID Único:</strong> 8 bits (0-255 nodos por red)</p></li>
+<li><p><strong>Configuración:</strong> Parámetros personalizables por nodo</p></li>
+<li><p><strong>Validación:</strong> Verificación de integridad de datos</p></li>
+<li><p><strong>Backup:</strong> Respaldo automático de configuración</p></li>
+</ul>
+</section>
+<section id="ejemplo-de-uso">
+<h2>Ejemplo de Uso<a class="headerlink" href="#ejemplo-de-uso" title="Enlace permanente a este encabezado"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;node_identity.h&quot;</span>
+
+<span class="n">NodeIdentity</span><span class="w"> </span><span class="n">nodeIdentity</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">nodeIdentity</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Configurar ID del nodo</span>
+<span class="w">    </span><span class="n">nodeIdentity</span><span class="p">.</span><span class="n">setNodeId</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Configurar parámetros de red</span>
+<span class="w">    </span><span class="n">nodeIdentity</span><span class="p">.</span><span class="n">setNetworkParameters</span><span class="p">(</span><span class="mf">433E6</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Obtener información del nodo</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">nodeId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nodeIdentity</span><span class="p">.</span><span class="n">getNodeId</span><span class="p">();</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nodeIdentity</span><span class="p">.</span><span class="n">getLocation</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Nodo ID: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">nodeId</span><span class="p">));</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Ubicación: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">location</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="metodos-principales">
+<h2>Métodos Principales<a class="headerlink" href="#metodos-principales" title="Enlace permanente a este encabezado"></a></h2>
+<section id="begin">
+<h3>begin()<a class="headerlink" href="#begin" title="Enlace permanente a este encabezado"></a></h3>
+<p>Inicializa el NodeIdentity y carga la configuración guardada.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">begin</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="setnodeid">
+<h3>setNodeId()<a class="headerlink" href="#setnodeid" title="Enlace permanente a este encabezado"></a></h3>
+<p>Configura el ID único del nodo en la red.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setNodeId</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">nodeId</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="getnodeid">
+<h3>getNodeId()<a class="headerlink" href="#getnodeid" title="Enlace permanente a este encabezado"></a></h3>
+<p>Obtiene el ID actual del nodo.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">getNodeId</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="setlocation">
+<h3>setLocation()<a class="headerlink" href="#setlocation" title="Enlace permanente a este encabezado"></a></h3>
+<p>Configura la ubicación geográfica del nodo.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setLocation</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">String</span><span class="o">&amp;</span><span class="w"> </span><span class="n">location</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="getlocation">
+<h3>getLocation()<a class="headerlink" href="#getlocation" title="Enlace permanente a este encabezado"></a></h3>
+<p>Obtiene la ubicación configurada del nodo.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="nf">getLocation</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="setnetworkparameters">
+<h3>setNetworkParameters()<a class="headerlink" href="#setnetworkparameters" title="Enlace permanente a este encabezado"></a></h3>
+<p>Configura los parámetros de comunicación de la red.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setNetworkParameters</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="n">frequency</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">power</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">spreadingFactor</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="saveconfiguration">
+<h3>saveConfiguration()<a class="headerlink" href="#saveconfiguration" title="Enlace permanente a este encabezado"></a></h3>
+<p>Guarda la configuración actual en memoria persistente.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">saveConfiguration</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="loadconfiguration">
+<h3>loadConfiguration()<a class="headerlink" href="#loadconfiguration" title="Enlace permanente a este encabezado"></a></h3>
+<p>Carga la configuración desde memoria persistente.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">loadConfiguration</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="getnodeinfo">
+<h3>getNodeInfo()<a class="headerlink" href="#getnodeinfo" title="Enlace permanente a este encabezado"></a></h3>
+<p>Obtiene información completa del nodo.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">NodeInfo</span><span class="w"> </span><span class="nf">getNodeInfo</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="estructura-de-configuracion">
+<h2>Estructura de Configuración<a class="headerlink" href="#estructura-de-configuracion" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>NodeInfo:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><dl class="simple">
+<dt>struct NodeInfo {</dt><dd><p>uint8_t nodeId;           // ID único del nodo
+String location;          // Ubicación geográfica
+String description;       // Descripción del sitio
+long frequency;           // Frecuencia LoRa
+int power;               // Potencia de transmisión
+int spreadingFactor;      // Factor de dispersión
+String firmwareVersion;   // Versión del firmware
+unsigned long uptime;     // Tiempo de funcionamiento</p>
+</dd>
+</dl>
+<p>};</p>
+</div></blockquote>
+<p><strong>Configuración de Red:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><dl class="simple">
+<dt>struct NetworkConfig {</dt><dd><p>uint8_t nodeId;
+long frequency;
+int power;
+int spreadingFactor;
+int bandwidth;
+int codingRate;
+int preambleLength;</p>
+</dd>
+</dl>
+<p>};</p>
+</div></blockquote>
+</section>
+<section id="persistencia-de-datos">
+<h2>Persistencia de Datos<a class="headerlink" href="#persistencia-de-datos" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Almacenamiento en EEPROM:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>#define EEPROM_NODE_ID_ADDR 0
+#define EEPROM_LOCATION_ADDR 1
+#define EEPROM_FREQUENCY_ADDR 32
+#define EEPROM_POWER_ADDR 36
+#define EEPROM_SPREADING_FACTOR_ADDR 40</p>
+</div></blockquote>
+<p><strong>Validación de Integridad:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><dl>
+<dt>bool validateConfiguration() {</dt><dd><p>// Verificar checksum
+uint16_t storedChecksum = EEPROM.read(EEPROM_CHECKSUM_ADDR);
+uint16_t calculatedChecksum = calculateChecksum();</p>
+<p>return storedChecksum == calculatedChecksum;</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+</section>
+<section id="gestion-de-versiones">
+<h2>Gestión de Versiones<a class="headerlink" href="#gestion-de-versiones" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Información de Versión:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><dl class="simple">
+<dt>struct VersionInfo {</dt><dd><p>uint8_t major;
+uint8_t minor;
+uint8_t patch;
+String buildDate;
+String buildTime;</p>
+</dd>
+</dl>
+<p>};</p>
+</div></blockquote>
+<p><strong>Actualización de Firmware:</strong>
+* <strong>Verificación:</strong> Valida integridad del nuevo firmware
+* <strong>Backup:</strong> Guarda versión anterior
+* <strong>Rollback:</strong> Permite volver a versión anterior
+* <strong>Notificación:</strong> Informa sobre actualizaciones</p>
+</section>
+<section id="configuracion-por-defecto">
+<h2>Configuración por Defecto<a class="headerlink" href="#configuracion-por-defecto" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Valores Iniciales:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>#define DEFAULT_NODE_ID 0
+#define DEFAULT_FREQUENCY 433E6
+#define DEFAULT_POWER 20
+#define DEFAULT_SPREADING_FACTOR 7
+#define DEFAULT_LOCATION «Sin configurar»
+#define DEFAULT_DESCRIPTION «Nodo agrícola»</p>
+</div></blockquote>
+<p><strong>Configuración Automática:</strong>
+* <strong>Auto-Detección:</strong> Identifica tipo de sensor automáticamente
+* <strong>Configuración por GPS:</strong> Usa coordenadas para configuración
+* <strong>Aprendizaje:</strong> Adapta parámetros según uso</p>
+</section>
+<section id="casos-de-uso">
+<h2>Casos de Uso<a class="headerlink" href="#casos-de-uso" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Configuración Inicial:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>// Configurar nodo por primera vez
+nodeIdentity.begin();
+nodeIdentity.setNodeId(1);
+nodeIdentity.setLocation(«Campo Norte - Sector A»);
+nodeIdentity.saveConfiguration();</p>
+</div></blockquote>
+<p><strong>Actualización de Configuración:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>// Cambiar parámetros de red
+nodeIdentity.setNetworkParameters(868E6, 18, 8);
+nodeIdentity.saveConfiguration();</p>
+</div></blockquote>
+<p><strong>Información del Sistema:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>// Obtener información completa
+NodeInfo info = nodeIdentity.getNodeInfo();
+Serial.println(«Nodo: » + String(info.nodeId));
+Serial.println(«Ubicación: » + info.location);
+Serial.println(«Firmware: » + info.firmwareVersion);</p>
+</div></blockquote>
+</section>
+<section id="notas-de-implementacion">
+<h2>Notas de Implementación<a class="headerlink" href="#notas-de-implementacion" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Thread-Safe:</strong> Seguro para operaciones concurrentes</p></li>
+<li><p><strong>Error Recovery:</strong> Recuperación automática de fallos</p></li>
+<li><p><strong>Validación:</strong> Verificación de integridad de datos</p></li>
+<li><p><strong>Backup:</strong> Respaldo automático de configuración</p></li>
+</ul>
+</section>
+<section id="ver-tambien">
+<h2>Ver también<a class="headerlink" href="#ver-tambien" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="app_logic.html"><span class="doc">AppLogic</span></a></p></li>
+<li><p><a class="reference internal" href="radio_manager.html"><span class="doc">RadioManager</span></a></p></li>
+<li><p><span class="xref std std-doc">../user_guide/configuration</span></p></li>
+<li><p><span class="xref std std-doc">../developer_guide/node_setup</span></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Equipo de Desarrollo.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

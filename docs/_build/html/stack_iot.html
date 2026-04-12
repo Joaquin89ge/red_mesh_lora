@@ -1,32 +1,26 @@
-
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="es" data-content_root="./">
+<html class="writer-html5" lang="es" >
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stack IoT y Servicios de Infraestructura &mdash; documentación de Sistema Red Mesh Agrícola - 1.0.0</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=7d55ca93" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=7d55ca93" />
-
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-      <script src="_static/jquery.js?v=5d32c60e"></script>
-      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=36c4ab74"></script>
-      <script src="_static/doctools.js?v=9bcbadda"></script>
-      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="_static/translations.js?v=f85f4cfb"></script>
-      <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
-      <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
-      <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
-      <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
-      <script type="module">
-import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
-window.addEventListener("load", () => mermaid.run());
-</script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=14be7d3c"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/translations.js?v=efdbd0b9"></script>
+        <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
@@ -45,6 +39,9 @@ window.addEventListener("load", () => mermaid.run());
           <a href="index.html" class="icon icon-home">
             Sistema Red Mesh Agrícola
           </a>
+              <div class="version">
+                1.0.0
+              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
@@ -122,13 +119,13 @@ window.addEventListener("load", () => mermaid.run());
            <div itemprop="articleBody">
              
   <section id="stack-iot-y-servicios-de-infraestructura">
-<h1>Stack IoT y Servicios de Infraestructura<a class="headerlink" href="#stack-iot-y-servicios-de-infraestructura" title="Link to this heading"></a></h1>
+<h1>Stack IoT y Servicios de Infraestructura<a class="headerlink" href="#stack-iot-y-servicios-de-infraestructura" title="Enlace permanente a este encabezado"></a></h1>
 <p>Esta sección describe el stack IoT que soporta el sistema de red mesh agrícola, incluyendo la infraestructura de servicios containerizados con Docker.</p>
 <section id="arquitectura-del-stack-iot">
-<h2>Arquitectura del Stack IoT<a class="headerlink" href="#arquitectura-del-stack-iot" title="Link to this heading"></a></h2>
+<h2>Arquitectura del Stack IoT<a class="headerlink" href="#arquitectura-del-stack-iot" title="Enlace permanente a este encabezado"></a></h2>
 <p>El sistema utiliza un conjunto de servicios containerizados que trabajan en conjunto para proporcionar una solución completa de IoT:</p>
-<pre  class="mermaid">
-        graph TB
+<div class="mermaid">
+            graph TB
     subgraph &quot;Stack IoT Completo&quot;
         subgraph &quot;Capa de Sensores&quot;
             A[Nodos ESP32] --&gt; B[Gateway LoRa]
@@ -152,15 +149,14 @@ window.addEventListener("load", () => mermaid.run());
             F --&gt; G[Grafana&lt;br/&gt;Puerto 3000]
         end
     end
-    </pre></section>
+        </div></section>
 </section>
 <section id="servicios-del-stack-iot">
-<h1>Servicios del Stack IoT<a class="headerlink" href="#servicios-del-stack-iot" title="Link to this heading"></a></h1>
+<h1>Servicios del Stack IoT<a class="headerlink" href="#servicios-del-stack-iot" title="Enlace permanente a este encabezado"></a></h1>
 <section id="influxdb-base-de-datos-de-series-temporales">
-<h2>InfluxDB - Base de Datos de Series Temporales<a class="headerlink" href="#influxdb-base-de-datos-de-series-temporales" title="Link to this heading"></a></h2>
+<h2>InfluxDB - Base de Datos de Series Temporales<a class="headerlink" href="#influxdb-base-de-datos-de-series-temporales" title="Enlace permanente a este encabezado"></a></h2>
 <p><strong>InfluxDB</strong> es la base de datos de series temporales que almacena todos los datos de sensores del sistema agrícola.</p>
-<a class="reference internal image-reference" href="_images/3b4b2b04-d47f-43a2-8f3c-509a0c8e5bee.jpeg"><img alt="Configuración de InfluxDB" class="align-center" src="_images/3b4b2b04-d47f-43a2-8f3c-509a0c8e5bee.jpeg" style="width: 600px;" />
-</a>
+<a class="reference internal image-reference" href="_images/3b4b2b04-d47f-43a2-8f3c-509a0c8e5bee.jpeg"><img alt="Configuración de InfluxDB" class="align-center" src="_images/3b4b2b04-d47f-43a2-8f3c-509a0c8e5bee.jpeg" style="width: 600px;" /></a>
 <p><strong>Descripción de la imagen:</strong> Esta captura muestra la interfaz de administración de InfluxDB donde se configuran las bases de datos, usuarios y políticas de retención. Se pueden observar las configuraciones de autenticación y las opciones de gestión de datos temporales para el almacenamiento de información de sensores agrícolas.</p>
 <p><strong>Características principales:</strong>
 - Almacenamiento optimizado para datos de series temporales
@@ -170,10 +166,9 @@ window.addEventListener("load", () => mermaid.run());
 <p><strong>Acceso:</strong> <a class="reference external" href="http://localhost:8086">http://localhost:8086</a></p>
 </section>
 <section id="grafana-visualizacion-y-dashboards">
-<h2>Grafana - Visualización y Dashboards<a class="headerlink" href="#grafana-visualizacion-y-dashboards" title="Link to this heading"></a></h2>
+<h2>Grafana - Visualización y Dashboards<a class="headerlink" href="#grafana-visualizacion-y-dashboards" title="Enlace permanente a este encabezado"></a></h2>
 <p><strong>Grafana</strong> proporciona dashboards interactivos para visualizar los datos de sensores en tiempo real.</p>
-<a class="reference internal image-reference" href="_images/69fd6074-0f6e-496e-ad7c-bfd86b251a17.jpeg"><img alt="Dashboard de Grafana con métricas agrícolas" class="align-center" src="_images/69fd6074-0f6e-496e-ad7c-bfd86b251a17.jpeg" style="width: 600px;" />
-</a>
+<a class="reference internal image-reference" href="_images/69fd6074-0f6e-496e-ad7c-bfd86b251a17.jpeg"><img alt="Dashboard de Grafana con métricas agrícolas" class="align-center" src="_images/69fd6074-0f6e-496e-ad7c-bfd86b251a17.jpeg" style="width: 600px;" /></a>
 <p><strong>Descripción de la imagen:</strong> Dashboard principal de Grafana mostrando gráficos en tiempo real de temperatura, humedad, presión atmosférica y otros parámetros ambientales. Se observan múltiples paneles con diferentes visualizaciones como gráficos de líneas, gauges y tablas de datos que permiten monitorear el estado del sistema agrícola en tiempo real.</p>
 <p><strong>Características principales:</strong>
 - Dashboards interactivos y personalizables
@@ -183,10 +178,9 @@ window.addEventListener("load", () => mermaid.run());
 <p><strong>Acceso:</strong> <a class="reference external" href="http://localhost:3000">http://localhost:3000</a> (usuario: admin, contraseña: admin)</p>
 </section>
 <section id="node-red-procesamiento-de-flujos">
-<h2>Node-RED - Procesamiento de Flujos<a class="headerlink" href="#node-red-procesamiento-de-flujos" title="Link to this heading"></a></h2>
+<h2>Node-RED - Procesamiento de Flujos<a class="headerlink" href="#node-red-procesamiento-de-flujos" title="Enlace permanente a este encabezado"></a></h2>
 <p><strong>Node-RED</strong> es el motor de procesamiento que gestiona el flujo de datos entre los sensores y los servicios de almacenamiento.</p>
-<a class="reference internal image-reference" href="_images/c0086f25-f7b7-4111-b488-d5849bdb6729.jpeg"><img alt="Flujo de Node-RED para procesamiento de datos" class="align-center" src="_images/c0086f25-f7b7-4111-b488-d5849bdb6729.jpeg" style="width: 600px;" />
-</a>
+<a class="reference internal image-reference" href="_images/c0086f25-f7b7-4111-b488-d5849bdb6729.jpeg"><img alt="Flujo de Node-RED para procesamiento de datos" class="align-center" src="_images/c0086f25-f7b7-4111-b488-d5849bdb6729.jpeg" style="width: 600px;" /></a>
 <p><strong>Descripción de la imagen:</strong> Interfaz de Node-RED mostrando un flujo de trabajo complejo que incluye nodos MQTT para recepción de datos, transformaciones de datos, validaciones y envío a InfluxDB. Se observan múltiples conexiones entre nodos que representan el flujo de procesamiento desde la recepción de datos de sensores hasta su almacenamiento final.</p>
 <p><strong>Características principales:</strong>
 - Editor visual de flujos drag-and-drop
@@ -196,10 +190,9 @@ window.addEventListener("load", () => mermaid.run());
 <p><strong>Acceso:</strong> <a class="reference external" href="http://localhost:1880">http://localhost:1880</a></p>
 </section>
 <section id="mosquitto-mqtt-broker-de-mensajeria">
-<h2>Mosquitto MQTT - Broker de Mensajería<a class="headerlink" href="#mosquitto-mqtt-broker-de-mensajeria" title="Link to this heading"></a></h2>
+<h2>Mosquitto MQTT - Broker de Mensajería<a class="headerlink" href="#mosquitto-mqtt-broker-de-mensajeria" title="Enlace permanente a este encabezado"></a></h2>
 <p><strong>Mosquitto</strong> es el broker MQTT que maneja la comunicación entre los nodos sensores y los servicios de procesamiento.</p>
-<a class="reference internal image-reference" href="_images/6265188e-8d33-4f4d-9901-c90dec6407ba.jpeg"><img alt="Configuración del broker Mosquitto MQTT" class="align-center" src="_images/6265188e-8d33-4f4d-9901-c90dec6407ba.jpeg" style="width: 600px;" />
-</a>
+<a class="reference internal image-reference" href="_images/6265188e-8d33-4f4d-9901-c90dec6407ba.jpeg"><img alt="Configuración del broker Mosquitto MQTT" class="align-center" src="_images/6265188e-8d33-4f4d-9901-c90dec6407ba.jpeg" style="width: 600px;" /></a>
 <p><strong>Descripción de la imagen:</strong> Panel de administración de Mosquitto mostrando la configuración del broker, tópicos activos, clientes conectados y estadísticas de mensajes. Se pueden observar las configuraciones de seguridad, usuarios y permisos de acceso que permiten la comunicación segura entre los nodos sensores y el sistema de procesamiento.</p>
 <p><strong>Características principales:</strong>
 - Broker MQTT ligero y eficiente
@@ -210,12 +203,11 @@ window.addEventListener("load", () => mermaid.run());
 </section>
 </section>
 <section id="implementacion-docker">
-<h1>Implementación Docker<a class="headerlink" href="#implementacion-docker" title="Link to this heading"></a></h1>
+<h1>Implementación Docker<a class="headerlink" href="#implementacion-docker" title="Enlace permanente a este encabezado"></a></h1>
 <p>El stack IoT completo se implementa utilizando Docker Compose para facilitar el despliegue y gestión de servicios.</p>
 <section id="despliegue-con-docker-compose">
-<h2>Despliegue con Docker Compose<a class="headerlink" href="#despliegue-con-docker-compose" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="_images/65555b6b-3e2f-40a8-aa66-abe0aa746c93.jpeg"><img alt="Configuración Docker Compose para el stack IoT" class="align-center" src="_images/65555b6b-3e2f-40a8-aa66-abe0aa746c93.jpeg" style="width: 600px;" />
-</a>
+<h2>Despliegue con Docker Compose<a class="headerlink" href="#despliegue-con-docker-compose" title="Enlace permanente a este encabezado"></a></h2>
+<a class="reference internal image-reference" href="_images/65555b6b-3e2f-40a8-aa66-abe0aa746c93.jpeg"><img alt="Configuración Docker Compose para el stack IoT" class="align-center" src="_images/65555b6b-3e2f-40a8-aa66-abe0aa746c93.jpeg" style="width: 600px;" /></a>
 <p><strong>Descripción de la imagen:</strong> Terminal mostrando la ejecución de <cite>docker compose up</cite> con todos los servicios del stack IoT iniciándose. Se observan los logs de cada contenedor (InfluxDB, Grafana, Node-RED, Mosquitto) y el estado de inicialización de cada servicio, confirmando que todos los componentes se levantan correctamente.</p>
 <p><strong>Comando de despliegue:</strong>
 .. code-block:: bash</p>
@@ -224,21 +216,20 @@ window.addEventListener("load", () => mermaid.run());
 </div></blockquote>
 </section>
 <section id="configuracion-de-red-docker">
-<h2>Configuración de Red Docker<a class="headerlink" href="#configuracion-de-red-docker" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="_images/d046ff00-246e-4d78-ae4f-fc60e46e9b0d.jpeg"><img alt="Configuración de red Docker para servicios IoT" class="align-center" src="_images/d046ff00-246e-4d78-ae4f-fc60e46e9b0d.jpeg" style="width: 600px;" />
-</a>
+<h2>Configuración de Red Docker<a class="headerlink" href="#configuracion-de-red-docker" title="Enlace permanente a este encabezado"></a></h2>
+<a class="reference internal image-reference" href="_images/d046ff00-246e-4d78-ae4f-fc60e46e9b0d.jpeg"><img alt="Configuración de red Docker para servicios IoT" class="align-center" src="_images/d046ff00-246e-4d78-ae4f-fc60e46e9b0d.jpeg" style="width: 600px;" /></a>
 <p><strong>Descripción de la imagen:</strong> Diagrama de red Docker mostrando cómo los contenedores se comunican entre sí a través de una red personalizada. Se observan las conexiones entre InfluxDB, Grafana, Node-RED y Mosquitto, así como la exposición de puertos al host para acceso externo a los servicios.</p>
 </section>
 </section>
 <section id="tabla-de-puertos-y-servicios">
-<h1>Tabla de Puertos y Servicios<a class="headerlink" href="#tabla-de-puertos-y-servicios" title="Link to this heading"></a></h1>
+<h1>Tabla de Puertos y Servicios<a class="headerlink" href="#tabla-de-puertos-y-servicios" title="Enlace permanente a este encabezado"></a></h1>
 <p>La siguiente tabla describe todos los puertos utilizados por el stack IoT:</p>
 <table class="docutils align-default" id="id1">
-<caption><span class="caption-text">Puertos del Stack IoT</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<caption><span class="caption-text">Puertos del Stack IoT</span><a class="headerlink" href="#id1" title="Enlace permanente a esta tabla"></a></caption>
 <colgroup>
-<col style="width: 10.0%" />
-<col style="width: 30.0%" />
-<col style="width: 60.0%" />
+<col style="width: 10%" />
+<col style="width: 30%" />
+<col style="width: 60%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Puerto</p></th>
@@ -271,15 +262,13 @@ window.addEventListener("load", () => mermaid.run());
 </table>
 </section>
 <section id="flujo-de-datos-del-sistema">
-<h1>Flujo de Datos del Sistema<a class="headerlink" href="#flujo-de-datos-del-sistema" title="Link to this heading"></a></h1>
-<a class="reference internal image-reference" href="_images/d0efe62b-82cf-4238-aff3-5d7d2400f566.jpeg"><img alt="Diagrama de flujo de datos del sistema IoT" class="align-center" src="_images/d0efe62b-82cf-4238-aff3-5d7d2400f566.jpeg" style="width: 600px;" />
-</a>
+<h1>Flujo de Datos del Sistema<a class="headerlink" href="#flujo-de-datos-del-sistema" title="Enlace permanente a este encabezado"></a></h1>
+<a class="reference internal image-reference" href="_images/d0efe62b-82cf-4238-aff3-5d7d2400f566.jpeg"><img alt="Diagrama de flujo de datos del sistema IoT" class="align-center" src="_images/d0efe62b-82cf-4238-aff3-5d7d2400f566.jpeg" style="width: 600px;" /></a>
 <p><strong>Descripción de la imagen:</strong> Diagrama de flujo completo que muestra cómo los datos fluyen desde los sensores ESP32, a través del gateway LoRa, hacia Mosquitto MQTT, luego a Node-RED para procesamiento, después a InfluxDB para almacenamiento, y finalmente a Grafana para visualización. El diagrama ilustra la arquitectura completa del sistema de monitoreo agrícola.</p>
 </section>
 <section id="monitoreo-y-mantenimiento">
-<h1>Monitoreo y Mantenimiento<a class="headerlink" href="#monitoreo-y-mantenimiento" title="Link to this heading"></a></h1>
-<a class="reference internal image-reference" href="_images/4b62c527-ed36-4cd3-ae18-f33d30508489.jpeg"><img alt="Panel de monitoreo de servicios Docker" class="align-center" src="_images/4b62c527-ed36-4cd3-ae18-f33d30508489.jpeg" style="width: 600px;" />
-</a>
+<h1>Monitoreo y Mantenimiento<a class="headerlink" href="#monitoreo-y-mantenimiento" title="Enlace permanente a este encabezado"></a></h1>
+<a class="reference internal image-reference" href="_images/4b62c527-ed36-4cd3-ae18-f33d30508489.jpeg"><img alt="Panel de monitoreo de servicios Docker" class="align-center" src="_images/4b62c527-ed36-4cd3-ae18-f33d30508489.jpeg" style="width: 600px;" /></a>
 <p><strong>Descripción de la imagen:</strong> Interfaz de monitoreo que muestra el estado de todos los contenedores Docker, uso de recursos (CPU, memoria), logs en tiempo real y métricas de rendimiento. Se observan indicadores de salud para cada servicio del stack IoT, permitiendo un monitoreo continuo del sistema.</p>
 <p><strong>Herramientas de monitoreo:</strong>
 - Docker Stats para métricas de contenedores
@@ -288,9 +277,8 @@ window.addEventListener("load", () => mermaid.run());
 - Alertas automáticas en Grafana</p>
 </section>
 <section id="seguridad-y-configuracion">
-<h1>Seguridad y Configuración<a class="headerlink" href="#seguridad-y-configuracion" title="Link to this heading"></a></h1>
-<a class="reference internal image-reference" href="image/WhatsAppImage2025-10-19at08.53.03.jpeg"><img alt="Configuración de seguridad del stack IoT" class="align-center" src="image/WhatsAppImage2025-10-19at08.53.03.jpeg" style="width: 600px;" />
-</a>
+<h1>Seguridad y Configuración<a class="headerlink" href="#seguridad-y-configuracion" title="Enlace permanente a este encabezado"></a></h1>
+<a class="reference internal image-reference" href="image/WhatsAppImage2025-10-19at08.53.03.jpeg"><img alt="Configuración de seguridad del stack IoT" class="align-center" src="image/WhatsAppImage2025-10-19at08.53.03.jpeg" style="width: 600px;" /></a>
 <p><strong>Descripción de la imagen:</strong> Panel de configuración de seguridad mostrando configuraciones de autenticación, certificados SSL/TLS, políticas de acceso y configuraciones de red segura para el stack IoT. Se observan las opciones de configuración que garantizan la seguridad de la comunicación entre servicios.</p>
 <p><strong>Consideraciones de seguridad:</strong>
 - Autenticación en todos los servicios
@@ -299,7 +287,7 @@ window.addEventListener("load", () => mermaid.run());
 - Backup automático de configuraciones</p>
 </section>
 <section id="uso-del-sistema">
-<h1>Uso del Sistema<a class="headerlink" href="#uso-del-sistema" title="Link to this heading"></a></h1>
+<h1>Uso del Sistema<a class="headerlink" href="#uso-del-sistema" title="Enlace permanente a este encabezado"></a></h1>
 <p><strong>Acceso a los servicios:</strong></p>
 <ol class="arabic simple">
 <li><p><strong>InfluxDB (Puerto 8086):</strong>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AppLogic &mdash; documentación de Sistema de Monitoreo Agrícola - 1.0.0</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=14be7d3c"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Sistema de Monitoreo Agrícola
+          </a>
+              <div class="version">
+                1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Índice de Documentación</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Visión General del Sistema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html#id1">Errores Comunes y Decisiones de Diseño</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocol.html">Protocolo de Comunicación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocol.html#id1">Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ejemplos_uso.html">Ejemplos de Uso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metricas.html">Métricas de Rendimiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recursos.html">Recursos y Enlaces Externos</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sistema de Monitoreo Agrícola</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">AppLogic</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/app_logic.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="applogic">
+<h1>AppLogic<a class="headerlink" href="#applogic" title="Enlace permanente a este encabezado"></a></h1>
+<section id="descripcion">
+<h2>Descripción<a class="headerlink" href="#descripcion" title="Enlace permanente a este encabezado"></a></h2>
+<p>El <strong>AppLogic</strong> es el cerebro del sistema de monitoreo agrícola, responsable de
+la lógica de aplicación, toma de decisiones y coordinación entre todos los
+componentes del sistema. Implementa la inteligencia del nodo para optimizar
+el funcionamiento y la transmisión de datos.</p>
+</section>
+<section id="caracteristicas-principales">
+<h2>Características Principales<a class="headerlink" href="#caracteristicas-principales" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Coordinación Central:</strong> Orquesta todos los componentes del sistema</p></li>
+<li><p><strong>Lógica de Decisión:</strong> Toma decisiones inteligentes sobre transmisión y operación</p></li>
+<li><p><strong>Gestión de Estado:</strong> Mantiene el estado global del nodo</p></li>
+<li><p><strong>Optimización Energética:</strong> Controla el consumo de energía</p></li>
+<li><p><strong>Gestión de Errores:</strong> Manejo robusto de fallos y recuperación</p></li>
+</ul>
+</section>
+<section id="arquitectura-del-sistema">
+<h2>Arquitectura del Sistema<a class="headerlink" href="#arquitectura-del-sistema" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Componentes Integrados:</strong>
+* <strong>SensorManager:</strong> Adquisición de datos sensoriales
+* <strong>RadioManager:</strong> Comunicación LoRa mesh
+* <strong>NodeIdentity:</strong> Gestión de identidad y configuración
+* <strong>VoltageReader:</strong> Monitoreo de energía</p>
+<p><strong>Flujo de Datos:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>SensorManager → AppLogic → RadioManager → Mesh Network
+↑                                    ↓
+VoltageReader ← AppLogic ← NodeIdentity ← Config</p>
+</div></blockquote>
+</section>
+<section id="ejemplo-de-uso">
+<h2>Ejemplo de Uso<a class="headerlink" href="#ejemplo-de-uso" title="Enlace permanente a este encabezado"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;app_logic.h&quot;</span>
+
+<span class="n">AppLogic</span><span class="w"> </span><span class="n">appLogic</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">appLogic</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Ejecutar lógica principal</span>
+<span class="w">    </span><span class="n">appLogic</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Verificar estado del sistema</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">appLogic</span><span class="p">.</span><span class="n">isSystemHealthy</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Sistema funcionando correctamente&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Problemas detectados en el sistema&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="metodos-principales">
+<h2>Métodos Principales<a class="headerlink" href="#metodos-principales" title="Enlace permanente a este encabezado"></a></h2>
+<section id="begin">
+<h3>begin()<a class="headerlink" href="#begin" title="Enlace permanente a este encabezado"></a></h3>
+<p>Inicializa la lógica de aplicación y todos los componentes.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">begin</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="run">
+<h3>run()<a class="headerlink" href="#run" title="Enlace permanente a este encabezado"></a></h3>
+<p>Ejecuta la lógica principal del sistema en cada iteración.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="processsensordata">
+<h3>processSensorData()<a class="headerlink" href="#processsensordata" title="Enlace permanente a este encabezado"></a></h3>
+<p>Procesa los datos de los sensores y toma decisiones.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">processSensorData</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="transmitdata">
+<h3>transmitData()<a class="headerlink" href="#transmitdata" title="Enlace permanente a este encabezado"></a></h3>
+<p>Transmite datos según la estrategia de comunicación.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">transmitData</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="issystemhealthy">
+<h3>isSystemHealthy()<a class="headerlink" href="#issystemhealthy" title="Enlace permanente a este encabezado"></a></h3>
+<p>Verifica el estado general del sistema.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">isSystemHealthy</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="getsystemstatus">
+<h3>getSystemStatus()<a class="headerlink" href="#getsystemstatus" title="Enlace permanente a este encabezado"></a></h3>
+<p>Obtiene información detallada del estado del sistema.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SystemStatus</span><span class="w"> </span><span class="nf">getSystemStatus</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="estrategias-de-transmision">
+<h2>Estrategias de Transmisión<a class="headerlink" href="#estrategias-de-transmision" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Transmisión Inteligente:</strong>
+* <strong>Datos Críticos:</strong> Transmisión inmediata
+* <strong>Datos Normales:</strong> Transmisión programada
+* <strong>Datos Históricos:</strong> Transmisión en lotes
+* <strong>Optimización:</strong> Solo transmite cambios significativos</p>
+<p><strong>Priorización de Datos:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><dl class="simple">
+<dt>enum DataPriority {</dt><dd><p>CRITICAL = 0,    // Alertas y errores
+HIGH = 1,        // Datos importantes
+NORMAL = 2,      // Datos regulares
+LOW = 3          // Datos históricos</p>
+</dd>
+</dl>
+<p>};</p>
+</div></blockquote>
+</section>
+<section id="gestion-de-energia">
+<h2>Gestión de Energía<a class="headerlink" href="#gestion-de-energia" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Estrategias de Ahorro:</strong>
+* <strong>Sleep Adaptativo:</strong> Ajusta tiempo de sleep según actividad
+* <strong>Transmisión Selectiva:</strong> Solo envía datos necesarios
+* <strong>Modo Bajo Consumo:</strong> Reduce frecuencia de muestreo
+* <strong>Alerta de Batería:</strong> Notifica cuando la energía es baja</p>
+<p><strong>Estados de Energía:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><dl class="simple">
+<dt>enum PowerState {</dt><dd><p>NORMAL,           // Operación normal
+CONSERVATION,     // Ahorro de energía
+CRITICAL,         // Batería baja
+EMERGENCY         // Modo de emergencia</p>
+</dd>
+</dl>
+<p>};</p>
+</div></blockquote>
+</section>
+<section id="logica-de-decision">
+<h2>Lógica de Decisión<a class="headerlink" href="#logica-de-decision" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Criterios de Transmisión:</strong>
+* <strong>Cambio Significativo:</strong> Datos que cambian más del umbral
+* <strong>Tiempo Transcurrido:</strong> Transmisión periódica
+* <strong>Eventos Críticos:</strong> Alertas y errores
+* <strong>Solicitud Externa:</strong> Comandos de control</p>
+<p><strong>Algoritmo de Decisión:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><dl>
+<dt>bool shouldTransmit(SensorData data) {</dt><dd><p>// Verificar cambio significativo
+if (abs(data.value - lastValue) &gt; threshold) {</p>
+<blockquote>
+<div><p>return true;</p>
+</div></blockquote>
+<p>}</p>
+<p>// Verificar tiempo transcurrido
+if (millis() - lastTransmission &gt; transmissionInterval) {</p>
+<blockquote>
+<div><p>return true;</p>
+</div></blockquote>
+<p>}</p>
+<p>// Verificar eventos críticos
+if (data.isCritical()) {</p>
+<blockquote>
+<div><p>return true;</p>
+</div></blockquote>
+<p>}</p>
+<p>return false;</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+</section>
+<section id="gestion-de-errores">
+<h2>Gestión de Errores<a class="headerlink" href="#gestion-de-errores" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Tipos de Errores:</strong>
+* <strong>Errores de Sensores:</strong> Lecturas fuera de rango
+* <strong>Errores de Comunicación:</strong> Fallos en transmisión
+* <strong>Errores de Energía:</strong> Batería baja o inestable
+* <strong>Errores de Sistema:</strong> Fallos de hardware</p>
+<p><strong>Estrategias de Recuperación:</strong>
+* <strong>Reintento Automático:</strong> Reintenta operaciones fallidas
+* <strong>Modo Degradado:</strong> Funciona con capacidades limitadas
+* <strong>Reset Inteligente:</strong> Reinicio controlado del sistema
+* <strong>Logging Detallado:</strong> Registro de errores para análisis</p>
+</section>
+<section id="optimizaciones">
+<h2>Optimizaciones<a class="headerlink" href="#optimizaciones" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Cache Inteligente:</strong> Almacena datos frecuentemente usados</p></li>
+<li><p><strong>Compresión de Datos:</strong> Reduce tamaño de transmisiones</p></li>
+<li><p><strong>Batch Processing:</strong> Procesa datos en lotes</p></li>
+<li><p><strong>Predictive Analysis:</strong> Anticipa necesidades del sistema</p></li>
+</ul>
+</section>
+<section id="casos-de-uso">
+<h2>Casos de Uso<a class="headerlink" href="#casos-de-uso" title="Enlace permanente a este encabezado"></a></h2>
+<p><strong>Monitoreo Continuo:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>// Ejecutar lógica principal
+appLogic.run();</p>
+<p>// Verificar salud del sistema
+if (!appLogic.isSystemHealthy()) {</p>
+<blockquote>
+<div><p>// Activar modo de emergencia
+appLogic.activateEmergencyMode();</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p><strong>Transmisión Inteligente:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>// Procesar datos y decidir transmisión
+appLogic.processSensorData();</p>
+<p>// Transmitir solo si es necesario
+if (appLogic.shouldTransmit()) {</p>
+<blockquote>
+<div><p>appLogic.transmitData();</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p><strong>Gestión de Energía:</strong>
+.. code-block:: cpp</p>
+<blockquote>
+<div><p>// Verificar estado de energía
+PowerState powerState = appLogic.getPowerState();</p>
+<dl class="simple">
+<dt>switch (powerState) {</dt><dd><dl class="simple">
+<dt>case CRITICAL:</dt><dd><p>appLogic.activatePowerSavingMode();
+break;</p>
+</dd>
+<dt>case EMERGENCY:</dt><dd><p>appLogic.activateEmergencyMode();
+break;</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+</section>
+<section id="notas-de-implementacion">
+<h2>Notas de Implementación<a class="headerlink" href="#notas-de-implementacion" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Thread-Safe:</strong> Seguro para operaciones concurrentes</p></li>
+<li><p><strong>Error Recovery:</strong> Recuperación automática de fallos</p></li>
+<li><p><strong>Debug Logging:</strong> Información detallada de operaciones</p></li>
+<li><p><strong>Configuración Dinámica:</strong> Parámetros ajustables en tiempo real</p></li>
+</ul>
+</section>
+<section id="ver-tambien">
+<h2>Ver también<a class="headerlink" href="#ver-tambien" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="sensor_manager.html"><span class="doc">SensorManager</span></a></p></li>
+<li><p><a class="reference internal" href="radio_manager.html"><span class="doc">RadioManager</span></a></p></li>
+<li><p><a class="reference internal" href="node_identity.html"><span class="doc">NodeIdentity</span></a></p></li>
+<li><p><span class="xref std std-doc">../user_guide/configuration</span></p></li>
+<li><p><span class="xref std std-doc">../developer_guide/system_architecture</span></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Equipo de Desarrollo.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

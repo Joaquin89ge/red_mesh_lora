@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Errores Comunes y Decisiones de Diseño &mdash; documentación de Sistema de Monitoreo Agrícola - 1.0.0</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=14be7d3c"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Sistema de Monitoreo Agrícola
+          </a>
+              <div class="version">
+                1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Índice de Documentación</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Visión General del Sistema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#id1">Errores Comunes y Decisiones de Diseño</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/protocol.html">Protocolo de Comunicación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/protocol.html#id1">Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ejemplos_uso.html">Ejemplos de Uso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../metricas.html">Métricas de Rendimiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recursos.html">Recursos y Enlaces Externos</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sistema de Monitoreo Agrícola</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Errores Comunes y Decisiones de Diseño</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/overview/errores_comunes.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="errores-comunes-y-decisiones-de-diseno">
+<h1>Errores Comunes y Decisiones de Diseño<a class="headerlink" href="#errores-comunes-y-decisiones-de-diseno" title="Enlace permanente a este encabezado"></a></h1>
+<p>Durante el desarrollo del sistema de monitoreo agrícola, se presentaron diversos desafíos técnicos y de integración. Aquí se documentan los errores más frecuentes, los llamados «errores fantasma» y las decisiones clave tomadas para robustecer el sistema.</p>
+<section id="errores-comunes">
+<h2>Errores Comunes<a class="headerlink" href="#errores-comunes" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Problemas de comunicación LoRa:</strong>
+- Causados por interferencias, mala configuración de pines o falta de ACK.
+- Solución: Verificar conexiones, reiniciar el módulo y ajustar parámetros en <cite>config.h</cite>.</p></li>
+<li><p><strong>Desbordamiento de buffers:</strong>
+- Ocurre si no se controla el tamaño de los arrays de muestras.
+- Solución: Uso de defines y verificaciones en el código.</p></li>
+<li><p><strong>Lecturas inválidas de sensores:</strong>
+- Por desconexión, mal cableado o sensores defectuosos.
+- Solución: Manejo de errores y valores por defecto en las estructuras.</p></li>
+<li><p><strong>Pérdida de datos GPS con SoftwareSerial:</strong>
+- El módulo GPS envía datos continuamente sin solicitud previa.
+- Con SoftwareSerial se perdían datos críticos de ubicación.
+- <strong>Solución:</strong> Cambiar a HardwareSerial (UART2) para GPS.
+- <strong>Configuración:</strong> Pines 16 (RX), 17 (TX) para UART2.</p></li>
+<li><p><strong>Errores de comunicación RS485:</strong>
+- Timeouts en comunicación con módulo sensor externo.
+- Datos corruptos o incompletos.
+- <strong>Solución:</strong> Verificar conexiones, ajustar timeouts y usar protocolo simple «ILF».
+- <strong>Configuración:</strong> Pines 14 (RX), 15 (TX), 2 (Control DE/RE).</p></li>
+</ul>
+</section>
+<section id="errores-fantasma">
+<h2>Errores Fantasma<a class="headerlink" href="#errores-fantasma" title="Enlace permanente a este encabezado"></a></h2>
+<ul class="simple">
+<li><p><strong>Reseteos inesperados del ESP32:</strong>
+- A veces causados por watchdog, otras por picos de consumo o fallos de memoria.
+- Decisión: Implementar el Task Watchdog Timer (TWDT) y documentar los síntomas.</p></li>
+<li><p><strong>Datos GPS nulos tras reinicio:</strong>
+- El GPS puede tardar 30-60 segundos en obtener señal tras un cold start.
+- Decisión: Alimentar el GPS de forma independiente para hot start.</p></li>
+<li><p><strong>Mensajes que no llegan al gateway:</strong>
+- Puede ser por tablas de enrutamiento perdidas o gateway fuera de línea.
+- Decisión: Reintentos automáticos y logging detallado.</p></li>
+</ul>
+</section>
+<section id="decisiones-de-diseno">
+<h2>Decisiones de Diseño<a class="headerlink" href="#decisiones-de-diseno" title="Enlace permanente a este encabezado"></a></h2>
+<ul>
+<li><p><strong>Arquitectura por capas:</strong>
+- Separación clara entre lógica de aplicación, comunicación, sensores y protocolo.</p></li>
+<li><p><strong>Configuración centralizada:</strong>
+- Uso de <cite>config.h</cite> para todos los parámetros críticos.</p></li>
+<li><p><strong>Buffers circulares y manejo de errores:</strong>
+- Para evitar pérdida de datos y facilitar el debug.</p></li>
+<li><p><strong>Documentación y pruebas continuas:</strong>
+- Uso de Sphinx y ejemplos prácticos para asegurar mantenibilidad.</p></li>
+<li><p><strong>Comunicación Serial Optimizada:</strong>
+- <strong>GPS (HardwareSerial UART2):</strong> El módulo GPS envía datos continuamente sin solicitud previa.</p>
+<blockquote>
+<div><p>Con SoftwareSerial se perdían datos críticos de ubicación. HardwareSerial garantiza captura completa.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>RS485 (SoftwareSerial):</strong> Comunicación bajo demanda (solicitamos datos cuando los necesitamos).
+SoftwareSerial es suficiente para comunicación controlada y permite flexibilidad en pines.</p></li>
+<li><p><strong>Configuración:</strong> GPS (pines 16,17) + RS485 (pines 14,15, control 2)</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p><strong>Lección Aprendida:</strong> Para dispositivos que envían datos continuamente (GPS), usar HardwareSerial.
+Para comunicación controlada bajo demanda (RS485), SoftwareSerial es suficiente.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Si encuentras un error no documentado aquí, por favor repórtalo para mejorar el sistema.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Equipo de Desarrollo.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
