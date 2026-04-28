@@ -1,6 +1,6 @@
 # Sistema Red Mesh Agrícola
 
-[![Docs](https://img.shields.io/badge/docs-local-blue.svg)](https://69f12b8b7fa0109a0fb4dc12--glowing-bienenstitch-a11f31.netlify.app/)
+[![Docs Online](https://img.shields.io/badge/docs-online-blue.svg)](https://69f12b8b7fa0109a0fb4dc12--glowing-bienenstitch-a11f31.netlify.app/)
 [![Documentación Local](https://img.shields.io/badge/docs-local-green.svg)](docs/_build/html/index.html)
 
 Sistema avanzado para monitoreo y control agrícola basado en red mesh LoRa, integrando múltiples nodos sensores y gateways para recolección y análisis de datos en tiempo real.
