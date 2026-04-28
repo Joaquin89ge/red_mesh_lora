@@ -1,6 +1,6 @@
 # Sistema Red Mesh Agrícola
 
-
+[![Docs online](https://69f12b8b7fa0109a0fb4dc12--glowing-bienenstitch-a11f31.netlify.app/)
 [![Docs](https://img.shields.io/badge/docs-local-blue.svg)](docs/_build/html/index.html)
 [![Documentación Local](https://img.shields.io/badge/docs-local-green.svg)](docs/_build/html/index.html)
 
